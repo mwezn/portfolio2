@@ -3,19 +3,51 @@ img.mypic {
     max-height: 300px;
 }
 
+div.tech {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 div.currenttech {
-    border: 2px solid black;
+    border: 1px solid black;
+    border-radius: 20px;
+    width:50%;
+    margin-top:20px;
 }
 
 div.futuretech {
-    border: 2px solid blue;
+    border: 1px solid blue;
+    border-radius: 20px;
+    width:50%;
+    margin-top:20px;
 }
 
 @media screen and (min-width:700px){
     div.tech {
         display:flex;
         flex-direction: row;
+        
     }
+
+div.currenttech {
+    border: 1px solid black;
+    border-radius: 20px;
+    width:50%;
+    margin-left:20px;
+    height:250px;
+}
+
+div.futuretech {
+    border: 1px solid blue;
+    border-radius: 20px;
+    width:50%;
+    margin-left:20px;
+    margin-right:20px;
+    height:250px;
+}
 
 }
     
