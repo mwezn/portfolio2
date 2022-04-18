@@ -4,8 +4,12 @@ import './home.css'
 const Home =()=>{
     return(
     <div id="aboutme">
-        <h1>Hello im Michael</h1>
+        <div id="about">
+        <div className="typingeff">
+          <h1>Hello im Michael</h1>
+        </div>
         <img className="mypic" alt="mypic" src={mypic}></img>
+        </div>
     <h2>Im a maths graduate with a deep interest in computer science , technology & how our world works. 
         Prior to working as a freelancer I worked several other jobs including roles as a teaching assistant, 
         bartender & construction work</h2>

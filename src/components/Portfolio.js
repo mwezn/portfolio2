@@ -18,9 +18,9 @@ const MainPage =()=>{
     }
     let myprojects=[
         {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1},
-        {name:"Medical data graph", tech:"HTML/Js, D3.js",img:img2},
+        {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2},
         {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'maja'},
-        {name: "Telegram style notes", tech:"Docker, Mongo, HTML", img:img4},
+        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4},
         {name: "Github repo tracker", tech:"React", img:img5,href:"repos"}
     ]
     let result=myprojects.map((d,i)=>{

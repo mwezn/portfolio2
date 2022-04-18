@@ -2,6 +2,10 @@ img.mypic {
     max-width:250px;
     max-height: 300px;
 }
+div#about {
+    position: relative;
+    top: 100px;
+}
 
 div.tech {
     display:flex;
