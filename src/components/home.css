@@ -1,0 +1,22 @@
+img.mypic {
+    max-width:250px;
+    max-height: 300px;
+}
+
+div.currenttech {
+    border: 2px solid black;
+}
+
+div.futuretech {
+    border: 2px solid blue;
+}
+
+@media screen and (min-width:700px){
+    div.tech {
+        display:flex;
+        flex-direction: row;
+    }
+
+}
+    
+
