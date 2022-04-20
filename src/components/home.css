@@ -1,6 +1,16 @@
+div.mypic {
+    border:1px solid black;
+    overflow: hidden;
+    height: 300px;
+}
+
 img.mypic {
-    max-width:250px;
-    max-height: 300px;
+    max-width:300px;
+    max-height: 350px;
+    transition: all 0.5s;
+}
+img.mypic:hover  {
+    transform:scale(1.1)
     
 }
 div#aboutme {
@@ -59,15 +69,20 @@ div.futuretech {
         justify-content: space-around;
         margin:60px
     }
+    div.mypic {
+        width: auto;
+        height:350px;
+    }
     div.tech {
         display:flex;
         flex-direction: row;
         
     }
+
     img.mypic {
-        max-width:250px;
-        max-height: 300px;
-        margin-left:100px;
+        max-width:300px;
+        max-height: 350px;
+        
     }
 
    div.currenttech {
