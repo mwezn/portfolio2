@@ -1,12 +1,17 @@
 img.mypic {
     max-width:250px;
     max-height: 300px;
+    
 }
-div#about {
+div#aboutme {
     position: relative;
     top: 100px;
 }
-
+div#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 div.tech {
     display:flex;
     flex-direction: column;
@@ -16,43 +21,79 @@ div.tech {
 }
 
 div.currenttech {
-    border: 1px solid black;
-    border-radius: 20px;
-    width:50%;
+    width:80%;
     margin-top:20px;
+    background-color: rgb(9, 99, 141,0.4);
+}
+div.currenttech:hover {
+  background-color: rgb(9,99,141,0.9);
 }
 
+.currenttech ul {
+    list-style-type:none;
+    display:grid;
+    padding:0;
+    grid-template-rows:30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
+    margin-right: 10px;
+    margin-left:10px;
+}
+
+
 div.futuretech {
-    border: 1px solid blue;
-    border-radius: 20px;
-    width:50%;
+    width:80%;
     margin-top:20px;
+    background-color: rgba(88, 160, 194, 0.9);
+}
+.futuretech ul {
+    list-style-type: none;
+    display:grid;
+    grid-template-rows: auto auto;
 }
 
 @media screen and (min-width:700px){
+    div#about {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        margin:60px
+    }
     div.tech {
         display:flex;
         flex-direction: row;
         
     }
+    img.mypic {
+        max-width:250px;
+        max-height: 300px;
+        margin-left:100px;
+    }
 
-div.currenttech {
-    border: 1px solid black;
-    border-radius: 20px;
-    width:50%;
+   div.currenttech {
+    
+    width:45%;
     margin-left:20px;
-    height:250px;
-}
+    
+  }
 
-div.futuretech {
-    border: 1px solid blue;
-    border-radius: 20px;
-    width:50%;
+  div.futuretech {
+    width:45%;
     margin-left:20px;
     margin-right:20px;
-    height:250px;
+    position: relative;
+  }
+  .currenttech ul {
+    display:flex;
+    flex-direction: column;
+  }
+  .futuretech ul {
+    display:flex;
+    flex-direction: column;
+  }
+.currenttech ul li {
+    margin-right: 100px;
 }
-
 }
     
 

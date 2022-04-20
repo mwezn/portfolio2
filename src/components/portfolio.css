@@ -1,4 +1,6 @@
 div.intro {
+    position: relative;
+    top:100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +13,8 @@ div.projects >div  {
     width:50vw;
     height:250px;
     overflow: hidden;
+    -webkit-box-shadow: 12px 9px 8px -2px #000000; 
+    box-shadow: 12px 9px 8px -2px #000000;
 }
 
 
@@ -114,7 +118,6 @@ img.screenshot {
         grid-template-columns: 24% 24% 24% 24% ;
         align-items: center;
         justify-content: left;
-        border:1px solid paleturquoise;
         width:95vw;
     }
     div.projects >div  {
@@ -123,6 +126,8 @@ img.screenshot {
         height:280px;
         word-wrap: normal;
         white-space: pre-wrap;
+        -webkit-box-shadow: 12px 9px 8px -2px #000000; 
+        box-shadow: 12px 9px 8px -2px #000000;
 
     }
     img.screenshot {
