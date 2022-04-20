@@ -17,9 +17,9 @@ const MainPage =()=>{
         window.location.href=d
     }
     let myprojects=[
-        {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com/'},
-        {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2},
-        {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com:5000'},
+        {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'0'},
+        {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:'1'},
+        {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'2'},
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4},
         {name: "Github repo tracker", tech:"React", img:img5,href:"repos"},
         {name: "Crypto price graph", tech: "React"},

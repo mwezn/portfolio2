@@ -27,8 +27,10 @@ const DescribePage =(props)=>{
             {
             data.length>0?
             <div>
-                <h1>{data[0].name}</h1>
-                <p>{data[0].description}</p>
+                <h1>{data[props.site].name}</h1>
+                <p>{data[props.site].description}</p>
+                <img alt="img"src={data[props.site].pics}></img>
+                <a target='_blank' rel="noreferrer"href="http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com/">The app is running here</a>
             </div>
             :<h1>Loading</h1>
             }
