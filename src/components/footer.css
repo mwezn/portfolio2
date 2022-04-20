@@ -1,0 +1,14 @@
+div.footer {
+    color:white;
+    position: relative;
+    border: 1px solid black;
+    background-color: rgba(132, 180, 180, 0.8);
+    top:100px;
+}
+.footer ul {
+    list-style-type: none;
+}
+.footer a {
+    color:white;
+
+}
