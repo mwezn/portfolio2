@@ -24,7 +24,6 @@ const Home =()=>{
         <li>Redux</li>
         <li>Jest</li>
         <li>MongoDB</li>
-        <li>Postgres/ SQL</li>
         <li>Python</li>
         <li>Docker</li>
         <li>AWS</li>
@@ -34,6 +33,7 @@ const Home =()=>{
         <h3>Technologies & skills I want to learn more about:</h3>
     <ul>
         <li>Machine Learning</li>
+        <li>Postgres/ SQL</li>
         <li>Nanonetworks</li>
         <li>CyberSecurity/ Ethical Hacking</li>
     </ul>
