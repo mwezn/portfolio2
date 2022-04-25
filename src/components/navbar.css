@@ -1,9 +1,61 @@
 nav {
-    background-color: rgb(9, 99, 141,0.4);
+    background-color: rgba(36, 157, 187, 1);
+    height: 80px;
     position:fixed;
     width:100vw;
     top:0;
     z-index: 1;
+}
+
+nav button {
+    display:block;
+}
+.menu-btn {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    border:2px solid white;
+    cursor: pointer;
+    
+}
+.menu-btn-burger {
+    width:50px;
+    height:6px;
+    background-color: white;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-60px);
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content:"";
+    position:absolute;
+    width:50px;
+    height:6px;
+    background-color: white;
+}
+
+.menu-btn-burger::before {
+    transform:translateY(-16px)
+}
+.menu-btn-burger::after {
+    transform:translateY(16px)
+}
+#showbar {
+    background-color: rgba(36, 157, 187, 0.8);
+    display: block;
+    position: relative;
+    transition: all 0.2s;
+    top:-300px;
+}
+#showbar.active {
+    top:0px
 }
 .navbar-links  {
     display:flex;
@@ -29,6 +81,15 @@ nav {
     display: block;
 }
 @media screen and (min-width: 550px){
+    #showbar {
+        display: block;
+        position: relative;
+        transition: all 0.2s;
+        top:0px;
+    }
+    nav button {
+        display:none;
+    }
     .navbar-links  {
         display:flex;
         flex-direction: row;
@@ -47,6 +108,16 @@ nav {
         text-decoration: none;
         transition: 2s;
         
+    }
+    .menu-btn {
+        position:relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width:60px;
+        height:60px;
+        border:2px solid white;
+        cursor: pointer;
     }
     .close {
         display:none;
