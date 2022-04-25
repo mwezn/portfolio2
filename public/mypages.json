@@ -1,7 +1,7 @@
 [ 
     {   "name": "Todo Emailer",
         "description": "I built this app in  March 2021 using React, Express & Mongoose to query data from a cluster its purpose is to send users email reminders of any tasks they set at a specific time. All users add their own tasks & delete them. The app has several bugs I need to fix. Its hosted on an Ubuntu AWS EC2  instance",
-        "pics" : ["images/todo.png"],
+        "pics" : ["images/todo.png","images/todo2.png","images/todo3.png","images/todo4.png"],
         "livelink": "http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com/"
 
     },
@@ -20,12 +20,14 @@
     },
     {
         "name": "Telegram",
-        "pics": ["images/examples.jpg"]
+        "description": "Me and one other student built this within an afternoon. It uses docker",
+        "pics": ["images/client-home.png", "images/client-form.png","images/client-posts.png"]
     },
     {
         "name": "Github repo tracker",
         "pics": ["images/examples.jpg"]
     }
+    
 
 
 ]
