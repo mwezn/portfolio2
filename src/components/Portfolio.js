@@ -20,10 +20,10 @@ const MainPage =()=>{
         {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'0'},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:'1'},
         {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'2'},
-        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4},
-        {name: "Github repo tracker", tech:"React", img:img5,href:"repos"},
-        {name: "Crypto price graph", tech: "React"},
-        {name: "Tictactoe", tech:'React'}
+        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'3'},
+        {name: "Github repo tracker", tech:"React", img:img5,href:"4"},
+        {name: "Crypto price graph", tech: "React", href:"5"},
+        {name: "Tictactoe", tech:'React', href:'6'}
     ]
     let result=myprojects.map((d,i)=>{
         let classId=((i+1)%8)===0?8:((i+1)%8)

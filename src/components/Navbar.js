@@ -1,10 +1,12 @@
 import React from "react";
 import './navbar.css'
 const Navbar =()=>{
-    let menuopen=false;
-    let menubtn=document.querySelector('.menu-btn')
-    const show =(e)=>{
-        //document.getElementById('showbar').classList.toggle('active')
+
+     let menuopen=false;
+     const show =(e)=>{
+        document.addEventListener("DOMContentLoaded", () => {  
+            let menubtn=document.querySelector('menu-btn')
+          ;
         if(!menuopen){
             menubtn.classList.add('open')
             document.getElementById('showbar').classList.add('active')
@@ -15,7 +17,10 @@ const Navbar =()=>{
             document.getElementById('showbar').classList.remove('active')
             menuopen=false;
         }
+    })
     }
+    
+    
     return(
         <nav id="navbar">
         <div className="menu-btn" onClick={e=>show(e)}>

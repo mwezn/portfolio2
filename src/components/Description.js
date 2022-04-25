@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import './description.css'
 
 const DescribePage =(props)=>{
@@ -32,7 +31,7 @@ const DescribePage =(props)=>{
             <div className='description'>
                 <h1>{data[props.site].name}</h1>
                 <p>{data[props.site].description}</p>
-                <Carousel>{data[props.site].pics.map(d=><img alt={d} src={d}></img>)}</Carousel>
+                {data[props.site].pics.map(d=><img alt={d} src={d}></img>)}
                 <a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is running here</a>
             </div>
             :<h1>Loading</h1>
