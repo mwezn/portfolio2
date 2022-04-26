@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './display.css'
 
 const RenderList = (props) =>{
@@ -9,13 +9,13 @@ const RenderList = (props) =>{
             values2.push(
             <li className='repo'>
               <h2>{d.name}</h2>
-                <a target="_blank" href={d.html_url}>{d.html_url}</a><br></br>
-                <a>Languages: {d.language}</a><br></br>
-                <a>Last Push: {new Date(d.pushed_at).toLocaleDateString()} at {new Date(d.pushed_at).toLocaleTimeString()} </a><br></br>
-                <a>Stargazers: {d.stargazers_count}</a><br></br>
-                <a>Visibility: {d.visibility}</a><br></br>
-                <a>Forks: {d.forks}</a><br></br>
-                <a>Issues Count: {d.open_issues}</a>
+                <a target="_blank" without rel="noreferrer" href={d.html_url}>{d.html_url}</a>
+                <p >Languages: {d.language}</p>
+                <p>Last Push: {new Date(d.pushed_at).toLocaleDateString()} at {new Date(d.pushed_at).toLocaleTimeString()} </p>
+                <p>Stargazers: {d.stargazers_count}</p>
+                <p>Visibility: {d.visibility}</p>
+                <p>Forks: {d.forks}</p>
+                <p>Issues Count: {d.open_issues}</p>
                 
     </li>)
         
@@ -31,7 +31,7 @@ const RenderList = (props) =>{
     
     return (
            <div>
-             <a onClick={(e)=>click()}>X</a>
+             <p onClick={(e)=>click()}>X</p>
 			     <div id="results" className='results'>
                 
                 <div><h1>There are {props.data.length} repos for {user}</h1><br></br>

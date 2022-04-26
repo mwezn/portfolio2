@@ -19,11 +19,17 @@ li.repo:hover {
     
 }
 
+li.repo p {
+    font-size:16px;
+}
+
 div.results {
     display: flex;
     justify-content: center;
     background-color: rgba(27, 43, 78, 0.5);/*rgb(138,43,226)*/
     width:80%;
+    overflow-y:scroll;
+    height: 80vh;
 }
 .results.active {
     display: none;
