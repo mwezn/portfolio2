@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Homepage from './components/Homepage'
 import Description from './components/Description'
+import RepoTracker from './components/Repo/Index'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Route path="/2" element={<Description site={2} />}></Route>
       <Route path="/3" element={<Description site={3} />}></Route>
       <Route path="/4" element={<Description site={4} />}></Route>
-      <Route path="/5" element={<Description site={5} />}></Route>
+      <Route path="/5" element={<RepoTracker />}></Route>
       <Route path="/6" element={<Description site={6} />}></Route>
       </Routes>
     </BrowserRouter>
