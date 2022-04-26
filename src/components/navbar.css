@@ -7,9 +7,6 @@ nav {
     z-index: 1;
 }
 
-nav button {
-    display:block;
-}
 .menu-btn {
     position:relative;
     display: flex;
@@ -27,19 +24,20 @@ nav button {
     background-color: white;
     transition: all .5s ease-in-out;
 }
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content:"";
+    position:fixed;
+    width:50px;
+    height:6px;
+    background-color: white;
+}
 
 .menu-btn.open .menu-btn-burger {
     transform: translateX(-60px);
 }
 
-.menu-btn-burger::before,
-.menu-btn-burger::after {
-    content:"";
-    position:absolute;
-    width:50px;
-    height:6px;
-    background-color: white;
-}
+
 
 .menu-btn-burger::before {
     transform:translateY(-16px)

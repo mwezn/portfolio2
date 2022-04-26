@@ -3,11 +3,10 @@ import './navbar.css'
 const Navbar =()=>{
 
      let menuopen=false;
-     const show =(e)=>{
-        document.addEventListener("DOMContentLoaded", () => {  
-            let menubtn=document.querySelector('menu-btn')
-          ;
-        if(!menuopen){
+   const show =(e)=>{
+        
+       let menubtn=document.querySelector('.menu-btn')
+       if(!menuopen){
             menubtn.classList.add('open')
             document.getElementById('showbar').classList.add('active')
             menuopen=true;
@@ -17,8 +16,8 @@ const Navbar =()=>{
             document.getElementById('showbar').classList.remove('active')
             menuopen=false;
         }
-    })
-    }
+        console.log('clicked')
+    }    
     
     
     return(
