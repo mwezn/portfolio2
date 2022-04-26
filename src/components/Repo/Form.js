@@ -19,7 +19,7 @@ const Form = () =>{
         let options= {method: 'GET'}
         await fetch(`https://api.github.com/users/${username}/repos`,options)
          .then(res=>{
-             if (res.status==404){
+             if (res.status===404){
               //GIVE USER DOESNT EXIST ERROR 
               setInput(old=>{
                   old.data=null;
