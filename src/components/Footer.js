@@ -8,7 +8,7 @@ const Footer =()=>{
               <h3>Contact</h3>
             <li><a target="_blank" rel="noreferrer" href="https://github.com/mwezn">Github: mwezn</a></li>
             <li><a href="mailto:m.w.g.nelson@gmail.com">m.w.g.nelson@gmail.com</a></li>
-            <li>LinkedIn: </li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/michael-nelson-023472bb/">LinkedIn</a></li>
           </ul>
           <p>Designed by Mike Nelson </p>
         </div>

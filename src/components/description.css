@@ -9,3 +9,16 @@
     align-items: center;
     border:1px solid black;
 }
+
+div.grid {
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 40%;
+}
+
+div.grid img {
+    max-width: 500px;
+    max-height: 400px;
+    margin-right: 100px;
+    padding-top:20px;
+}

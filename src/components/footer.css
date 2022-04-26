@@ -1,9 +1,13 @@
 div.footer {
     color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     border: 1px solid black;
-    background-color: rgba(132, 180, 180, 0.8);
+    background-color: rgba(142, 160, 160, 0.8);
     top:100px;
+    height:auto;
 }
 .footer ul {
     list-style-type: none;

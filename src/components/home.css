@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
 div.mypic {
     border:1px solid black;
     overflow: hidden;
     height: 300px;
+}
+#aboutme h2{
+    margin:20px;
 }
 
 img.mypic {
@@ -15,6 +22,8 @@ img.mypic:hover  {
 }
 div#aboutme {
     position: relative;
+    display: flex;
+    flex-direction: column;
     top: 100px;
 }
 div#about {
@@ -110,5 +119,18 @@ div.futuretech {
     margin-right: 100px;
 }
 }
+
+
+@keyframes typing {
+    from {
+      width: 0
+    }
+  
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent ;
+    }
+  }
     
 

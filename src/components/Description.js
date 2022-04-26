@@ -30,9 +30,11 @@ const DescribePage =(props)=>{
             data.length>0?
             <div className='description'>
                 <h1>{data[props.site].name}</h1>
-                <p>{data[props.site].description}</p>
-                {data[props.site].pics.map(d=><img alt={d} src={d}></img>)}
-                <a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is running here</a>
+                <a target='_blank' rel="noreferrer" href={data[props.site].github}>Click here to view the code</a>
+                <a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is deployed here</a>
+                <h3>{data[props.site].description}</h3>
+                <div className='grid'>{data[props.site].pics.map(d=><img alt={d} src={d}></img>)}</div>
+                
             </div>
             :<h1>Loading</h1>
             }

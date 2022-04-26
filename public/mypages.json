@@ -1,27 +1,37 @@
 [ 
     {   "name": "Todo Emailer",
         "description": "I built this app in  March 2021 using React, Express & Mongoose to query data from a cluster its purpose is to send users email reminders of any tasks they set at a specific time. All users add their own tasks & delete them. The app has several bugs I need to fix. Its hosted on an Ubuntu AWS EC2  instance",
-        "pics" : ["images/todo.png","images/todo2.png","images/todo3.png","images/todo4.png"],
-        "livelink": "http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com/"
-
+        "livelink": "http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com/",
+        "github": "https://github.com/mwezn/EmailReminderTodos",
+        "pics" : ["images/todo.png","images/todo2.png","images/todo3.png","images/todo5.jpg"]
     },
     { 
         "name": "Medical Data",
         "description":"This was my first small app I got paid to build on Upwork.com, It was requested by a client who wanted to help his wife with a pregnancy website based in Switzerland. It shows the likelihood of giving birth before or after a womans due date. Its not intended for medical advice but simply to show how medical survey data in CSV format can be displayed. Also the CSV data is far outdated & was taken from hospitals in the USA ages ago",
         "livelink": "https://mwezn.github.io/DueDateVisualizer/",
+        "github": "https://github.com/mwezn/DueDateVisualizer",
         "pics": ["images/medicalmaths.png"]
 
     },
     {
         "name": "Maja Notes",
-        "description": "This was a group project I participated in during my bootcamp at Futureproof. It was interesting to see how databases could be as simple as a JSON file. I added the basic login & register functionality as an extra & right now im improving the mobile responsiveness of the images. We also used Jest as a testing suite with a coverage of around 40%. Its hosted on an Ubuntu AWS EC2  instance",
-        "pics": ["images/maja.png","images/peek.gif", "images/tests.png"],
-        "livelink": "http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com:5000"
+        "description": "This was a group project I participated in during my bootcamp at Futureproof. Our task was to create a fullstack app where users can post notes anonymously with custom text, comment on them aswell as update & delete them in addition to being able to add GIFs from a Giphy API, using just a JSON file to store data on the Node/Express backend. It was interesting to see how databases could be as simple as a JSON file. I added a basic login & register feature as an extra & right now im improving the mobile responsiveness of the images. We also used Jest as a testing suite with a coverage of around 40%. Its hosted on an Ubuntu AWS EC2  instance",
+        "livelink": "http://ec2-18-191-242-179.us-east-2.compute.amazonaws.com:5000",
+        "github": "https://github.com/nottnottloop/fp_majanotes",
+        "pics": ["images/maja.png","images/peek.gif", "images/tests.png"]
     },
     {
         "name": "Telegram",
         "description": "Me and one other student built this within an afternoon. It uses docker",
+        "github": "",
         "pics": ["images/client-home.png", "images/client-form.png","images/client-posts.png"]
+    },
+    {
+        "name": "Huel Template",
+        "description": "I built this prior to a job interview for their company, wasnt successful at the time",
+        "livelink": "https://HuelTemplate.mwezn.repl.co",
+        "pics": ["images/huel1.png", "images/huel2.png","images/huel3.png","images/huel4.png"]
+
     },
     {
         "name": "Github repo tracker",

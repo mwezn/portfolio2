@@ -33,6 +33,7 @@ const Home =()=>{
         <h3>Technologies & skills I want to learn more about:</h3>
     <ul>
         <li>Machine Learning</li>
+        <li>Django</li>
         <li>Postgres/ SQL</li>
         <li>Nanonetworks</li>
         <li>CyberSecurity/ Ethical Hacking</li>
