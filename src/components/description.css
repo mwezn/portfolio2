@@ -8,16 +8,34 @@
     flex-direction: column;
     align-items: center;
 }
-
 div.grid {
-    display:grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 40% 40%;
+    display: flex;
+    flex-direction: column;
+}
+div.grid img {
+    max-width:90%;
+    max-height:70%;
+    padding-top:20px;
+
 }
 
-div.grid img {
-    max-width: 500px;
-    max-height: 400px;
-    margin-right: 100px;
-    padding-top:20px;
+
+
+
+@media screen and (min-width:600px){
+    div.grid {
+        display:grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 40% 40%;
+    }
+    
+    div.grid img {
+        max-width: 100%;
+        max-height: 90%;
+        margin-left:10px;
+        padding-top:30px
+
+    }
+
+
 }
