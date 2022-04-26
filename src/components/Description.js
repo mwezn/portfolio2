@@ -30,8 +30,8 @@ const DescribePage =(props)=>{
             data.length>0?
             <div className='description'>
                 <h1>{data[props.site].name}</h1>
-                <a target='_blank' rel="noreferrer" href={data[props.site].github}>Click here to view the code</a>
-                <a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is deployed here</a>
+                {data[props.site].github?<a target='_blank' rel="noreferrer" href={data[props.site].github}>Click here to view the code</a>:null}
+                {data[props.site].livelink?<a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is deployed here</a>:null}
                 <h3>{data[props.site].description}</h3>
                 <div className='grid'>{data[props.site].pics.map(d=><img alt={d} src={d}></img>)}</div>
                 

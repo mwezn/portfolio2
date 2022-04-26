@@ -7,6 +7,9 @@ div.mypic {
     overflow: hidden;
     height: 300px;
 }
+div.typingeff h1{
+    font-family: 'Press Start 2P', cursive;
+}
 #aboutme h2{
     margin:20px;
 }
