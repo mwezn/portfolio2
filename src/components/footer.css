@@ -4,10 +4,11 @@ div.footer {
     flex-direction: column;
     align-items: center;
     position: relative;
-    border: 1px solid black;
     background-color: rgba(142, 160, 160, 0.8);
     top:100px;
     height:auto;
+    overflow: hidden;
+    
 }
 .footer ul {
     list-style-type: none;
@@ -16,3 +17,18 @@ div.footer {
     color:white;
 
 }
+
+@media screen and (min-width:600px){
+    div.footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .footer p {
+        padding-left:20px;
+    }
+    
+    
+}
+    
+
