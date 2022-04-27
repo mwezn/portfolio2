@@ -14,8 +14,8 @@ nav {
     align-items: center;
     width:60px;
     height:60px;
-    border:2px solid white;
     cursor: pointer;
+    
     
 }
 .menu-btn-burger {
@@ -23,21 +23,18 @@ nav {
     height:6px;
     background-color: white;
     transition: all .5s ease-in-out;
+    border-radius: 10px;
 }
 .menu-btn-burger::before,
 .menu-btn-burger::after {
     content:"";
-    position:fixed;
+    position:absolute;
     width:50px;
     height:6px;
     background-color: white;
+    transition: all .5s ease-in-out;
+    border-radius: 10px;
 }
-
-.menu-btn.open .menu-btn-burger {
-    transform: translateX(-60px);
-}
-
-
 
 .menu-btn-burger::before {
     transform:translateY(-16px)
@@ -45,6 +42,24 @@ nav {
 .menu-btn-burger::after {
     transform:translateY(16px)
 }
+
+
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+    background-color: rgba(245, 146, 17);
+    
+}
+
+.menu-btn.open .menu-btn-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    background-color: rgba(245, 146, 17);
+    
+}
+
 #showbar {
     background-color: rgba(36, 157, 187, 0.8);
     display: block;
@@ -58,6 +73,7 @@ nav {
 .navbar-links  {
     display:flex;
     flex-direction: column;
+    align-items: center;
    
 }
 .navbar-links li {
