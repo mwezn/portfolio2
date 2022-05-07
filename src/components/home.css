@@ -13,8 +13,13 @@ div.mypic {
     overflow: hidden;
     height: 300px;
 }
+
+div.typingeff {
+    background-color: black;
+}
 div.typingeff h1{
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'monospace';
+    color:white;
 }
 #aboutme h2{
     margin:20px;
@@ -49,12 +54,12 @@ div.tech {
 }
 
 div.currenttech {
+    display:flex;
+    flex-direction: column;
     width:80%;
     margin-top:20px;
     background-color: rgb(9, 99, 141,0.4);
-}
-div.currenttech:hover {
-  background-color: rgb(9,99,141,0.9);
+    align-items: center;
 }
 
 .currenttech ul {
@@ -69,6 +74,9 @@ div.currenttech:hover {
 
 
 div.futuretech {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     width:80%;
     margin-top:20px;
     background-color: rgba(88, 160, 194, 0.9);

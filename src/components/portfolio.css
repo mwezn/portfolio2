@@ -34,7 +34,6 @@ div.projects >div  {
 .card1:hover {
     background-color: rgb(127,255,212,0.9); /*rgb127,255,212*/
     color:white;
-    z-index: 1;
 
 }
 

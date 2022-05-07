@@ -2,11 +2,13 @@ import React from 'react'
 import mypic from '../assets/mypic.jpg'
 import './home.css'
 const Home =()=>{
+
+    
     return(
     <div id="aboutme">
         <div id="about">
         <div className="typingeff">
-          <h1>Hello im Michael</h1>
+          <h1 id="demo">:~ Hello I'm Michael.</h1>
         </div>
         <div className="mypic">
         <img className="mypic" alt="mypic" src={mypic}></img>
