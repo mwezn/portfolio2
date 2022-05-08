@@ -1,14 +1,35 @@
 import React from 'react'
 import mypic from '../assets/mypic.jpg'
 import './home.css'
+import { useEffect } from 'react'
 const Home =()=>{
+
+    var i = 0;
+    
+    var speed = 300; /* The speed/duration of the effect in milliseconds */
+
+   function typeWriter() {
+    var txt = ` Hello I'm Michael.` 
+     if (i < txt.length) {
+       document.getElementById("demo").innerHTML += txt.charAt(i);
+       i++;
+       setTimeout(typeWriter, speed);
+     }
+    }
+
+
+
+    useEffect(()=>{
+        typeWriter()
+    
+      },[])
 
     
     return(
     <div id="aboutme">
         <div id="about">
         <div className="typingeff">
-          <h1 id="demo">:~ Hello I'm Michael.</h1>
+          <h1 id="demo">:~</h1>
         </div>
         <div className="mypic">
         <img className="mypic" alt="mypic" src={mypic}></img>
