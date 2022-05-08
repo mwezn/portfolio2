@@ -1,5 +1,5 @@
 nav {
-    background-color: rgba(36, 157, 187, 1);
+    
     background-color: rgb(17, 46, 63);
     height: 80px;
     position:fixed;
@@ -62,8 +62,8 @@ nav {
 }
 
 #showbar {
-    background-color: rgba(36, 157, 187, 0.8);
-    background-color: rgb(17, 46, 63);
+    
+    background-color: rgb(17, 46, 63,0.7);
     display: block;
     position: relative;
     transition: all 0.2s;

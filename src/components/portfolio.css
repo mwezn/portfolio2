@@ -75,7 +75,7 @@ div.projects >div  {
 }
 .card4:hover {
     background-color: rgba(63, 95, 237, 0.9);/*rgb216,112,147*/
-    clip-path: circle(300px);
+    color:white;
 }
 
 .card5 {

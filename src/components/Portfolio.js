@@ -29,10 +29,10 @@ const MainPage =()=>{
         
     ]
     let result=myprojects.map((d,i)=>{
-        let classId=((i+1)%8)===0?8:((i+1)%8)
+        //let classId=((i+1)%8)===0?8:((i+1)%8)
     
         return (
-        <div target='_blank' onClick={(e)=>onClick(d.href,e)} className={'card'+classId}>
+        <div target='_blank' onClick={(e)=>onClick(d.href,e)} className={'card'+4}>
             <h1>{d.name}</h1><p>{d.tech}</p><img className="screenshot" alt={i} src={d.img}/>
         </div>)
     })
