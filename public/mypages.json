@@ -35,9 +35,19 @@
     },
     {
         "name": "Github repo tracker",
-        "pics": ["images/examples.jpg"]
+        "pics": ["images/examples.jpg"],
+        "description":"Site in progress. Check back soon"
+    },
+    {
+        "name": "Crypto price Graph",
+        "pics": ["images/examples.jpg"],
+        "description": "Site in progress. Check back soon"
+    },
+    {
+        "name": "Tictactoe",
+        "pics": ["images/examples.jpg"],
+        "description": "Site in progress. Check back soon"
     }
-    
 
 
 ]

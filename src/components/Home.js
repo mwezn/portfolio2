@@ -14,14 +14,9 @@ const Home =()=>{
            i++;
            setTimeout(typeWriter, speed);
          }
-        }
+    }
 
-   
-    
-useEffect(()=>{
-     /* The speed/duration of the effect in milliseconds */
-    
-   
+    useEffect(()=>{
      typeWriter();
     })
 
