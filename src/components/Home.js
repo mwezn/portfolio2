@@ -4,25 +4,26 @@ import './home.css'
 import { useEffect } from 'react'
 const Home =()=>{
 
+    var txt='';
     var i = 0;
+    var speed = 200;
+    function typeWriter() {
+        txt = ` Hello I'm Michael.` 
+         if (i < txt.length) {
+           document.getElementById("demo").innerHTML += txt.charAt(i);
+           i++;
+           setTimeout(typeWriter, speed);
+         }
+        }
+
+   
     
-    var speed = 300; /* The speed/duration of the effect in milliseconds */
-
-   function typeWriter() {
-    var txt = ` Hello I'm Michael.` 
-     if (i < txt.length) {
-       document.getElementById("demo").innerHTML += txt.charAt(i);
-       i++;
-       setTimeout(typeWriter, speed);
-     }
-    }
-
-
-
-    useEffect(()=>{
-        typeWriter()
+useEffect(()=>{
+     /* The speed/duration of the effect in milliseconds */
     
-      },[])
+   
+     typeWriter();
+    })
 
     
     return(
