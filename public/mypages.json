@@ -23,6 +23,7 @@
     {
         "name": "Telegram",
         "description": "Me and one other student built this within an afternoon. It uses docker",
+        "livelink":"https://free-thoughts.netlify.app/",
         "github": "https://github.com/neifors/codeChanllenge-telegraphStyle",
         "pics": ["images/client-home.png", "images/client-form.png","images/client-posts.png"]
     },
