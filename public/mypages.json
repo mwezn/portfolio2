@@ -21,6 +21,14 @@
         "pics": ["images/maja.png","images/peek.gif", "images/tests.png"]
     },
     {
+        "name": "weekly fitness tracker",
+        "description": "This was another group project I took part in during my bootcamp at Futureproof. Our challenge was to create a fullstack app using Docker that offers full CRUD operations & can keep track of a users habits. Another required feature was to add a secure login system & password hashing. This was succesfully done using jwt, node bcrypt & local storage. There are 2 possibilities we've explored to deploy it option1 ) Deploy html code on Netlify & run our docker server container on Heroku. Option 2) Change some docker compose commands to copy client,server & db into 1 container & serve it using express. Both seem to work? The habits are gym/fitness related. For e.g. However many times a week to go walking? How many ab crunches per day?",
+        "livelink": "https://weekly-fitness-tracker.netlify.app",
+        "github": "",
+        "pics": ["images/fitness1.png","images/fitness2.png", "images/fitness3.png"]
+
+    },
+    {
         "name": "Telegram",
         "description": "Me and one other student built this within an afternoon. It uses docker",
         "livelink":"https://free-thoughts.netlify.app/",

@@ -7,6 +7,7 @@ import img3 from '../assets/maja.png'
 import img4 from '../assets/client-posts.png'
 import img5 from '../assets/repo.png'
 import img6 from '../assets/huel4.png'
+import fitness from '../assets/fitness1.png'
 
 
 
@@ -21,11 +22,12 @@ const MainPage =()=>{
         {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'0'},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:'1'},
         {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'2'},
-        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'3'},
-        {name: "Huel template", tech:'HTML/CSS', href:'4',img: img6},
-        {name: "Github repo tracker", tech:"React", img:img5,href:"5"},
-        {name: "Crypto price graph", tech: "React", href:"6"},
-        {name: "Tictactoe", tech:'React', href:'7'},
+        {name: "Fitness tracker", tech:"Docker, Mongo, HTML", img:fitness,href:'3'},
+        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'4'},
+        {name: "Huel template", tech:'HTML/CSS', href:'5',img: img6},
+        {name: "Github repo tracker", tech:"React", img:img5,href:"6"},
+        {name: "Crypto price graph", tech: "React", href:"7"},
+        {name: "Tictactoe", tech:'React', href:'8'},
         
     ]
     let result=myprojects.map((d,i)=>{
