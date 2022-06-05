@@ -27,7 +27,7 @@ const DescribePage =(props)=>{
     return (
         <div>
         <nav id="navbar">
-         <div id="showbar">
+         <div id="show">
          <ul className='navbar-links'>
           <li><a href="/">Home</a></li>
          </ul>
