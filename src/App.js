@@ -18,6 +18,7 @@ function App() {
       <Route path="/5" element={<Description site={5} />}></Route>
       <Route path="/6" element={<Description site={6} />}></Route>
       <Route path="/7" element={<Description site={7} />}></Route>
+      <Route path="/8" element={<Description site={8} />}></Route>
       </Routes>
     </BrowserRouter>
   );
