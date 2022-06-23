@@ -25,7 +25,7 @@ const MainPage =()=>{
         {name: "Fitness tracker", tech:"Docker, Mongo, HTML", img:fitness,href:'3'},
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'4'},
         {name: "Huel template", tech:'HTML/CSS', href:'5',img: img6},
-        {name: "Github repo tracker", tech:"React", img:img5,href:"6"},
+        {name: "Github repo tracker", tech:"React",href:"6"},
         {name: "Crypto price graph", tech: "React", href:"7"},
         {name: "Tictactoe", tech:'React', href:'8'},
         
