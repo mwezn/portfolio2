@@ -5,8 +5,7 @@ const DescribePage =(props)=>{
     const [data,updateData]= useState([])
     console.log(data)
     const getData= async ()=>{
-        let options={ headers : { 'Content-Type': 'application/json','Accept': 'application/json'}
-        }
+        let options={ headers : { 'Content-Type': 'application/json','Accept': 'application/json'}}
         await fetch('mypages.json',options)
           .then( res=> {
             console.log(res)
@@ -15,9 +14,7 @@ const DescribePage =(props)=>{
         .then(function(myJson) {
            console.log(myJson);
            updateData(myJson)
-    
-
-          });
+        });
     }
     useEffect(()=>{
         getData()
