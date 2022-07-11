@@ -1,6 +1,7 @@
 [ 
     {   "name": "Todo Emailer",
-        "description": "I built this app in  March 2021 using React, Express & Mongoose to query data from a cluster its purpose is to send users email reminders of any tasks they set at a specific time. All users add their own tasks & delete them whenever needed. The app has several bugs I need to fix. Its hosted on an Ubuntu AWS EC2  instance",
+        "description": "I built this app in  March 2021 using React, Express & Mongoose to query data from a cluster its purpose is to send users email reminders of any tasks they set at a specific time. All users add their own tasks & delete them whenever needed. All users will be emailed at that specific times they chose to remind them. UPDATE July 11th 2022: Its now hosted on Heroku",
+        "livelink": "https://todoemailer.herokuapp.com/",
         "github": "https://github.com/mwezn/EmailReminderTodos",
         "pics" : ["images/todo.png","images/todo2.png","images/todo3.png","images/todo5.jpg"]
     },
