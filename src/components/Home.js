@@ -32,7 +32,8 @@ const Home =()=>{
         </div>
         </div>
     <h2>Im a maths graduate with a deep interest in computer science, technology & how our world works. 
-        Before working as a freelancer I worked in several other different places including roles as a teaching assistant, bartender & construction work</h2>
+        Before working as a freelancer I worked in several other different places including roles as a teaching assistant, bartender & construction work. This site is just like me...a constant work in progress!
+        </h2>
     <div className='tech'>
     <div className='currenttech'>
         <h3>Technologies im familiar with:</h3>
