@@ -16,6 +16,7 @@
     {
         "name": "Maja Notes",
         "description": "This was a group project I participated in during my bootcamp at Futureproof. Our task was to create a fullstack app where users can post notes anonymously with custom text, comment on them aswell as update & delete them in addition to being able to add GIFs from a Giphy API, using just a JSON file to store data on the Node/Express backend. It was interesting to see how databases could be as simple as a JSON file. I added a basic login & register feature as an extra & right now im improving the mobile responsiveness of the images. We also used Jest as a testing suite with a coverage of around 40%. Its hosted on an Ubuntu AWS EC2  instance",
+        "livelink": "https://majanotes22.herokuapp.com/",
         "github": "https://github.com/nottnottloop/fp_majanotes",
         "pics": ["images/maja.png","images/peek.gif", "images/tests.png"]
     },
