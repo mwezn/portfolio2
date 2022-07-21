@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './description.css';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const DescribePage =(props)=>{
     const [data,updateData]= useState([])
@@ -40,7 +42,7 @@ const DescribePage =(props)=>{
                 {data[props.site].github?<a target='_blank' rel="noreferrer" href={data[props.site].github}>Click here to view the code</a>:null}
                 {data[props.site].livelink?<a target='_blank' rel="noreferrer" href={data[props.site].livelink}>The app is live here</a>:null}
                 <h3>{data[props.site].description}</h3>
-                <div className='grid'>{data[props.site].pics.map(d=><img alt={d} src={d}></img>)}</div>
+                <Carousel width="50%" height="20%">{data[props.site].pics.map(d=><img alt={d} src={d}></img>)}</Carousel>
                 
             </div>
             :<h1>Loading</h1>

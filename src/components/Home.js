@@ -31,34 +31,9 @@ const Home =()=>{
         <img className="mypic" alt="mypic" src={mypic}></img>
         </div>
         </div>
-    <h2>Im a maths graduate with a deep interest in computer science, technology & how our world works. 
-        Before working as a freelancer I worked in several other different places including roles as a teaching assistant, bartender & construction work. This site is just like me...a constant work in progress!
-        </h2>
-    <div className='tech'>
-    <div className='currenttech'>
-        <h3>Technologies im familiar with:</h3>
-    <ul>
-        <li>HTML/CSS</li>
-        <li>React</li>
-        <li>Redux</li>
-        <li>Jest</li>
-        <li>MongoDB</li>
-        <li>Python</li>
-        <li>Docker</li>
-        <li>AWS</li>
-    </ul>
-    </div>
-    <div className='futuretech'>
-        <h3>Technologies & skills I want to learn more about:</h3>
-    <ul>
-        <li>Machine Learning</li>
-        <li>Django</li>
-        <li>Postgres/ SQL</li>
-        <li>Nanonetworks</li>
-        <li>CyberSecurity/ Ethical Hacking</li>
-    </ul>
-    </div>
-    </div>
+    <h2>I'm a maths graduate whose fascinated by computer science, technology & how our world works. 
+        I'm currently working in construction but in my spare time I enjoy coding.
+    </h2>
 
 </div>
     )

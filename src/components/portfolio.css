@@ -7,6 +7,10 @@ div.intro {
     align-items: center;
 }
 
+div.projects2 {
+    background-color:rgb(127,255,212,0.3);
+}
+
 div.projects >div  {
     padding: 10px;
     margin:10px 10px 10px 20px;
@@ -69,13 +73,16 @@ div.projects >div  {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(63, 95, 237, 0.5);/*rgb216,112,147*/
+    background-color: rgba(63, 95, 237, 0.2);/*rgb216,112,147*/
     border:1px solid black;
+    border-radius: 10px;
     transition: all 1s;
 }
 .card4:hover {
     background-color: rgba(63, 95, 237, 0.9);/*rgb216,112,147*/
     color:white;
+    border: 3px solid black;
+    transform: scale(1.1);
 }
 
 .card5 {
@@ -126,6 +133,12 @@ div.projects >div  {
 .card8:hover {
     background-color: rgba(237, 17, 208, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+}
+
+.roundedCard {
+    background-color: rgb(51, 83, 83);
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 img.screenshot {
