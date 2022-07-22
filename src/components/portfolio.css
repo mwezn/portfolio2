@@ -17,8 +17,6 @@ div.projects >div  {
     width:50vw;
     height:250px;
     overflow: hidden;
-    -webkit-box-shadow: 12px 9px 8px -2px #000000; 
-    box-shadow: 12px 9px 8px -2px #000000;
 }
 
 
@@ -76,13 +74,17 @@ div.projects >div  {
     background-color: rgba(63, 95, 237, 0.2);/*rgb216,112,147*/
     border:1px solid black;
     border-radius: 10px;
-    transition: all 1s;
+    transition: all .3s;
+    cursor: pointer;
+    -webkit-box-shadow: 12px 9px 8px -2px #000000; 
+    box-shadow: 12px 9px 8px -20px #000000;
 }
 .card4:hover {
     background-color: rgba(63, 95, 237, 0.9);/*rgb216,112,147*/
     color:white;
-    border: 3px solid black;
+    border: 2px solid black;
     transform: scale(1.1);
+    box-shadow: 30px 9px 8px -2px #000000;
 }
 
 .card5 {
@@ -162,8 +164,8 @@ img.screenshot {
         height:280px;
         word-wrap: normal;
         white-space: pre-wrap;
-        -webkit-box-shadow: 12px 9px 8px -2px #000000; 
-        box-shadow: 12px 9px 8px -2px #000000;
+        -webkit-box-shadow: 9px 9px 8px -2px #000000; 
+        box-shadow: 9px 9px 8px -2px #000000;
 
     }
     img.screenshot {
