@@ -8,7 +8,7 @@ import img4 from '../assets/client-posts.png'
 //import img5 from '../assets/repo.png'
 import img6 from '../assets/huel4.png'
 import fitness from '../assets/fitness1.png'
-import jp from '../assets/j&p.png'
+//import jp from '../assets/j&p.png'
 
 
 
@@ -26,7 +26,7 @@ const MainPage =()=>{
         {name: "Fitness tracker", tech:"Docker, Mongo, HTML", img:fitness,href:'3'},
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'4'},
         {name: "Huel template", tech:'HTML/CSS', href:'5',img: img6},
-        {name:"Jones & Palmer", tech:"React", img:jp}
+        //{name:"Jones & Palmer", tech:"React", img:jp}
 
     ]
     let result=myprojects.map((d,i)=>{
