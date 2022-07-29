@@ -1,5 +1,4 @@
 import React from 'react'
-import mypic from '../assets/mypic.jpg'
 import './home.css'
 import { useEffect } from 'react'
 const Home =()=>{
@@ -27,9 +26,7 @@ const Home =()=>{
         <div className="typingeff">
           <h1 id="demo">:~</h1>
         </div>
-        <div className="mypic">
-        <img className="mypic" alt="mypic" src={mypic}></img>
-        </div>
+
         </div>
     <h2>I'm a maths graduate whose fascinated by computer science, technology & how our world works. 
         I'm currently working in construction but in my spare time I enjoy coding.
