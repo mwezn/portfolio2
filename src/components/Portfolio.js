@@ -24,6 +24,7 @@ const MainPage =()=>{
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:"https://mwezn.github.io/DueDateVisualizer/"},
         {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:"https://majanotes22.herokuapp.com/"},
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:"https://free-thoughts.netlify.app/"},
+        {name: "Sorting Algorithms", tech:"HTML,JS & D3", href:"/SortingAlg/sorting.html"}
     ]
     let result=mypages.map((d,i)=>{
         //let classId=((i+1)%8)===0?8:((i+1)%8)
