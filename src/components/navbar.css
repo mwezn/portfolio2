@@ -1,4 +1,4 @@
-nav {
+nav.main {
     
     background-color: rgb(17, 46, 63);
     height: 80px;
@@ -61,7 +61,7 @@ nav {
     
 }
 
-#showbar {
+#links {
     
     background-color: rgb(17, 46, 63,0.7);
     display: block;
@@ -98,7 +98,7 @@ nav {
     display: block;
 }
 @media screen and (min-width: 550px){
-    #showbar {
+    #links {
         display: block;
         position: relative;
         transition: all 0.2s;

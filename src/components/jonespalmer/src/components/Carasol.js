@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react'
+import "./carousel.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import {Slide1, Slide2,Slide3,Slide4} from './Section2.js'
 
 
-class Cards extends React.Component {
+
+
+class MyApp extends React.Component {
     constructor(props) {
       super(props)
       this.state= {autoplay :false, buttonVal:"play"}
@@ -18,17 +21,17 @@ class Cards extends React.Component {
      
       const btnStyle={width:"75px",height:"75px", position:"relative", top:"0px",backgroundColor:"rgb(1,1,1,0.7)",color:"white"}
       
-      let slides2=[
-         <h1>HELLO</h1>
-        ,<h1>HELLO AGAIN</h1>]
+      let slides2=[<Slide1></Slide1>,
+         <Slide2></Slide2>,
+         <Slide3></Slide3>,
+         <Slide4></Slide4>
+         ]
       return (
-        <div data-testid="carousel">
-          <a href="/">Artists</a>
-        <h1>React-responsive-carousel</h1>
+        <div>
         
         <div id="section2">
         <button style={btnStyle} onClick={(e)=>this.pausePlay()}>{this.state.buttonVal}</button>
-        <Carousel width="90%" height="100%" statusFormatter={(current, total) => `${current} / ${total}`} showThumbs={false} infiniteLoop={true} interval={3000} autoPlay={this.state.autoplay}>
+        <Carousel statusFormatter={(current, total) => `${current} / ${total}`} showThumbs={false} infiniteLoop={true} interval={3000} autoPlay={this.state.autoplay}>
         {slides2}
         </Carousel>
         </div>
@@ -39,4 +42,4 @@ class Cards extends React.Component {
 
   
 
-  export default Cards;
+  export default MyApp

@@ -1,0 +1,79 @@
+#jpsection3 {
+    background-image: url("../assets/beach2.jpg");
+    height: 100vh;
+    width:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.jpintro {
+    padding:10px;
+    
+}
+#jpsection3 div.btmCar{
+    border:2px solid teal;
+    height:80vh;
+    
+    
+}
+
+#jpsection3 button.l {
+    display:inline;
+    position: absolute;
+    top:500px;
+    left: 0em;
+    z-index:10;
+}
+#jpsection3 button.r {
+    display:inline;
+    position:absolute;
+    top:500px;
+    right:0;
+
+
+}
+#jpsection3 img.l, img.r {
+    position: relative;
+    width:calc(100px - 10vw);
+    height:calc(100px - 10vw);
+    z-index:10;
+    bottom:0px;
+    transition: all 0.3s;
+}
+
+
+
+#jpsection3 img.l {
+    transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg); 
+    -webkit-transform: rotate(-180deg);
+}
+
+@media only screen and (min-width: 600px) { 
+
+    #jpsection3 button.l {
+        display:block;
+        position: absolute;
+        top:500px;
+        left:55%;
+        z-index:10;
+    }
+    #jpsection3 button.r {
+        display:block;
+        position:absolute;
+        top:500px;
+        right:0%;
+    
+    }
+    #jpsection3 img.l, img.r {
+        position: relative;
+        bottom:0px;
+        width:90px;
+        height:90px;
+        z-index:0;
+    }
+    
+  
+  }
+  

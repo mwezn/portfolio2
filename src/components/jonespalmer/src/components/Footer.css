@@ -1,0 +1,62 @@
+footer#jpcontact {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.jpleftLogo  {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+}
+
+.jpleftLogo img {
+    max-width: 15vw;
+    margin: 20px 20px 20px 30%;
+
+}
+.jpleftLogo span {
+    color:black;
+    margin: 5px 20px 20px 100px;
+}
+.jprightFoot {
+    max-width:50vw;
+}
+.jprightFoot img {
+    max-width: 60vw;
+    margin-top:100px;
+  
+}
+.jprightFootNav {
+    display: flex;
+}
+.jprightFootNav a {
+    color:black;
+    border:.5px solid black;
+    margin-top:10px;
+    
+}
+
+@media only screen and (min-width: 600px) {
+
+    footer#jpcontact {
+        display:grid;
+        grid-template-columns: 50vw 50vw;
+    }
+
+    .jpleftLogo {
+        display: flex;
+        flex-direction: column;
+    }
+    .jpleftLogo img  {
+        max-width: 50px;
+    
+    }
+
+
+    .jprightFoot img {
+        max-width:50vw;
+    }
+    
+
+}

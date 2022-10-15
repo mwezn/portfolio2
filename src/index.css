@@ -1,21 +1,19 @@
-* {
-    
-    font-family: 'Encode Sans SC', sans-serif;
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Press+Start+2P&family=Roboto&family=Thasadith&display=swap');
+
+
+.App {
+  text-align: center;
 }
+
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Thasadith', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #d2e3e9;
+  color:black;
   
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}

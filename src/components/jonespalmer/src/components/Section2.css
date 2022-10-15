@@ -1,0 +1,210 @@
+/* https://drive.google.com/file/d/1017I0Wr98aMIqDIt3H1kOuqw6kz6eg2H/view?usp=sharing*/
+#section2{
+    background-image: url("../assets/tan.jpg");
+    height: 110vh;
+    width:100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.contain {
+    display:grid;
+    border: 2px solid #44daf1;
+    grid-template-rows: 30vh 30vh 30vh;
+    grid-row-gap: 2px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jpcard2 {
+    display: grid;
+    justify-content: space-evenly;
+    height: 90%;
+    margin-bottom: calc(10px + 5vh);
+    margin: 10px 0 0 10%;
+    padding:10px 10px 10px 10px;
+    width: 80%;
+    background-color: rgba(47, 57, 61, 0.4);
+}
+.jpcard3 {
+    display: grid;
+    justify-content: space-evenly;
+    height: 90%;
+    margin: 10px 0 0 10%;
+    padding:10px 10px 10px 10px;
+    width: 80%;
+    background-color: rgba(29, 240, 58, 0.4);
+   
+    
+}
+.jpcard4 {
+    display: grid;
+    justify-content: space-evenly;
+    height: 90%;
+    margin: 10px 0 0 10%;
+    padding:10px 10px 10px 10px;
+    width: 80%;
+    background-color: rgba(245, 165, 61, 0.4);
+    
+
+}
+
+.jpcard2 ul {
+    list-style-type: none;
+}
+
+.inner-outline {
+    outline: 2px solid #fdfcfc;
+    outline-offset: -20px;
+}
+
+div.inner-outline h2 {
+    padding: 10px;
+    margin: auto;
+}
+div.inner-outline p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    padding:12px;
+    font-size: calc(10px + 6 * ((100vw - 600px) / 680))
+
+}
+  
+  div.bottomcarasol {
+    max-width:100vw;
+    position: relative;
+    top:50px;
+    height:450px;
+    margin: 60px 0px 20% 0px;
+    background-color: white;
+    color: black;
+    border: 2px solid grey;
+    background: #cccccc;
+    /* Fallback for older browsers without RGBA-support */
+    background: rgba(219, 208, 208, 0.7);
+    padding:12px;
+    overflow: scroll;
+    
+  }
+  div.bottomcarasol p {
+    color:black;
+    text-align:left;
+    font-size: calc(8px + 6 * ((100vw - 600px) / 680))
+}
+
+div.bottomcarasol h1 {
+    color:black;
+    text-align:left;
+    padding:30px;
+    font-size:calc(30px + 6 * ((100vw - 600px) / 680))
+
+}
+div.bottomcarasol h2 {
+    color:black;
+    text-align:left;
+    padding:30px;
+    font-size:calc(20px + 6 * ((100vw - 600px) / 680))
+}
+
+  @media only screen and (min-width: 800px) { 
+    .contain {
+        position: relative;
+        top:5px;
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: 20px;
+        justify-content: space-around;
+        
+    }
+    .jpcard2 {
+        position: relative;
+        top:200px;
+        display: grid;
+        height: calc(300px + 10vw);
+        width: 85%;
+        /*padding-right: calc(2vw- 20px);*/
+        background-color: rgba(47, 57, 61, 0.4);
+        transition: all .5s;
+        
+    }
+    .jpcard2:hover {
+        transform: scale(1.2);
+        background-color: rgba(47, 57, 61, 0.9);;
+    }
+    .jpcard3 {
+        position: relative;
+        top:200px;
+        display: grid;
+        height: calc(300px + 10vw);
+        width: 85%;
+        padding-right: calc(2vw- 20px);
+        background-color: rgba(29, 240, 58, 0.4);
+        transition: all .5s;
+        
+    }
+    .jpcard3:hover {
+        transform: scale(1.2);
+        background-color:rgba(29, 240, 58, 0.9);
+    }
+    .jpcard4 {
+        position: relative;
+        top:200px;
+        display: grid;
+        height: calc(300px + 10vw);
+        width: 85%;
+        padding-right: calc(2vw- 20px);
+        background-color: rgba(245, 165, 61, 0.4);
+        transition: all .5s;
+    }
+    .jpcard4:hover {
+        transform: scale(1.2);
+        background-color:rgba(245, 165, 61, 0.9);
+    }
+    
+    
+    div.inner-outline h2 {
+        margin: auto;
+    }
+   div.inner-outline p {
+        text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+        padding:12px;
+        font-size: calc(10px + 6 * ((100vw - 600px) / 680))
+
+    }
+    div.innerBox {
+        margin:20px;
+        border:1px solid red;
+    }
+    div.bottomcarasol {
+        position: relative;
+        top:100px;
+        max-width: 100vw;
+        height:400px;
+        padding: 12px;
+        background-color: white;
+        color: black;
+        border: 2px solid grey;
+        background: #cccccc;
+        /* Fallback for older browsers without RGBA-support */
+        background: rgba(219, 208, 208, 0.7);
+      }
+    div.bottomcarasol p {
+        color:black;
+        text-align:left;
+        font-size:calc(8px + 2* ((100vw - 600px) / 680))
+    }
+
+    div.bottomcarasol h1 {
+        color:black;
+        text-align:left;
+        padding:20px;
+        font-size:calc(30px + 2* ((100vw - 600px) / 680))
+    }
+}
+
+

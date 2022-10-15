@@ -21,11 +21,11 @@ const Navbar =()=>{
     
     
     return(
-        <nav id="navbar">
+        <nav className="main" id="navbar">
         <div className="menu-btn" onClick={e=>show(e)}>
             <div className="menu-btn-burger"></div>
         </div>
-         <div id="showbar">
+         <div id="links">
          <ul className="navbar-links">
           <li><a href="#aboutme">About</a></li>
           <li><a href="#projects">Projects</a></li>
