@@ -8,12 +8,12 @@ const Navbar =()=>{
        let menubtn=document.querySelector('.menu-btn')
        if(!menuopen){
             menubtn.classList.add('open')
-            document.getElementById('showbar').classList.add('active')
+            document.getElementById('links').classList.add('active')
             menuopen=true;
         }
         else {
             menubtn.classList.remove('open')
-            document.getElementById('showbar').classList.remove('active')
+            document.getElementById('links').classList.remove('active')
             menuopen=false;
         }
         console.log('clicked')

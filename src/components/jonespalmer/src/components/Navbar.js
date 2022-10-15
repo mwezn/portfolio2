@@ -36,7 +36,7 @@ const Navbar =()=> {
         <ul class="jpnavbar-links">
           <li><a href="#jpsection1">Section1</a></li>
           <li><a href="#section2">Section2</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#jpcontact">Contact</a></li>
           <div class="underbar"></div>
         </ul>
       </div>

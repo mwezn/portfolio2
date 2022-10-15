@@ -28,11 +28,11 @@ const Home =()=>{
         </div>
 
         </div>
-    <h2>I'm a maths graduate whose fascinated by computer science, technology & how our world works. 
-        I'm currently working in construction but in my spare time I enjoy coding.
-    </h2>
+        <h2>I'm a maths graduate whose fascinated by computer science, technology & how our world works. 
+            I'm currently working in construction but in my spare time I enjoy coding.
+        </h2>
+    </div>
 
-</div>
     )
 }
 

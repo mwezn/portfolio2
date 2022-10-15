@@ -69,7 +69,7 @@ nav.main {
     transition: all 0.2s;
     top:-300px;
 }
-#showbar.active {
+#links.active {
     top:0px
 }
 .navbar-links  {
