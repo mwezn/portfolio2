@@ -27,7 +27,8 @@ const MainPage =()=>{
         {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:"https://majanotes22.herokuapp.com/"},
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:"https://free-thoughts.netlify.app/"},
         {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/SortingAlg/sorting.html"},
-        {name: "Jones & Palmer", tech: "React", img:img6, href:"/jp"}
+        {name: "Jones & Palmer", tech: "React", img:img6, href:"/jp"},
+        {name: "Crypto prices", tech:"React D3", href:"/cryptod3"}
     ]
     let result=mypages.map((d,i)=>{
         //let classId=((i+1)%8)===0?8:((i+1)%8)
