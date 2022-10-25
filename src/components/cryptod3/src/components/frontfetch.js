@@ -22,17 +22,19 @@ class Chart extends Component {
     
         const requestOptions = {
             method: 'GET',
-            mode: 'no-cors',
+            //mode: 'no-cors', //This disables front end javascript too!
             headers: { 'Content-Type': 'application/json' }
         };
           //https://api.binance.com" might need this url in fetch instead of in proxy field inside package.json?
+          //https://api.binance.com/api/v1/klines?symbol=ETHUSDT&interval=1h
           const res= await fetch(`/api/v1/klines?symbol=${this.state.coinpair}&interval=${this.state.interval}`,requestOptions)
-          const data=await res.json();
-          this.setState({data:data})
-          console.log(data)
+          const d=await res.json();
+          console.log(d)
+          this.setState({data:d})
           let nested=this.state.data
           console.log(nested)
           this.shift(nested);
+          
 
           /*const data=await res.json();
           this.setState({data:data})
@@ -50,14 +52,13 @@ class Chart extends Component {
       })
     const requestOptions = {
         method: 'GET',
-        mode:'no-cors',
         headers: { 'Content-Type': 'application/json' }
     };
       
       const res= await fetch(`/api/v1/klines?symbol=${coin}&interval=${this.state.interval}`,requestOptions)
       const d=await res.json();
       console.log(d)
-      this.setState({data:d})
+      await this.setState({data:d})
       console.log(this.state)
       this.shift(d);
 
