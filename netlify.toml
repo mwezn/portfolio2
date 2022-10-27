@@ -10,6 +10,6 @@
 
 
 [[redirects]]
-    from = "/cryptod3/*" 
+    from = "/api/v1/*" 
     to = "https://api.binance.com"
     status = 200 # with this status
