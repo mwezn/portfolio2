@@ -7,4 +7,9 @@
     to = "/index.html" # to this html page
     status = 200 # with this status
 
-/cryptod3/*  https://api.binance.com  200
+
+
+[[redirects]]
+    from = "/cryptod3/*" 
+    to = "https://api.binance.com"
+    status = 200 # with this status
