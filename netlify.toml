@@ -6,7 +6,5 @@
     from = "/*" # redirect any path
     to = "/index.html" # to this html page
     status = 200 # with this status
-[[redirects]]
-  from = "/api/*"
-  to = "https://api.binance.com"
-  status = 200
+
+/cryptod3/*  https://api.binance.com  200
