@@ -12,4 +12,5 @@
 [[redirects]]
     from = "cryptod3/api/v1/*" 
     to = "https://api.binance.com"
+    force= true
     status = 200 # with this status
