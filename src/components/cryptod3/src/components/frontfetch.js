@@ -31,7 +31,7 @@ class Chart extends Component {
           const res=await fetch('/.netlify/functions/binance')
           const d=await res.json();
           console.log(d)
-          this.setState({data:d})
+          this.setState({data:d}) //Why isnt this working on netlify?
           let nested=this.state.data
           console.log(nested)
           this.shift(d);

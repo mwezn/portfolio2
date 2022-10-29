@@ -7,7 +7,7 @@ div.title {
 
 h1.coinpair {
     position:relative;
-    font-size:calc(16px -7vw);
+    font-size:calc(16px + 5vw);
     width: 80%;
     color: #1fcea2;
     border:1px solid black;
