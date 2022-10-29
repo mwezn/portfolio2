@@ -2,12 +2,12 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.binance.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "d3": "^7.0.0",
+    "node-fetch": "^2.6.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-responsive-carousel": "^3.2.23",
