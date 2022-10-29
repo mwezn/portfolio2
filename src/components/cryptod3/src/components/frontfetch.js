@@ -34,7 +34,7 @@ class Chart extends Component {
           this.setState({data:d})
           let nested=this.state.data
           console.log(nested)
-          this.shift(nested);
+          this.shift(d);
           
 
           /*const data=await res.json();
