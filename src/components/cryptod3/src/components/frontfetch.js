@@ -20,11 +20,11 @@ class Chart extends Component {
   }
    async componentDidMount() {
     
-        const requestOptions = {
+        /*const requestOptions = {
             method: 'GET',
             //mode: 'no-cors', //This disables front end javascript too!
             headers: { 'Content-Type': 'application/json' }
-        };
+        };*/
           //https://api.binance.com" might need this url in fetch instead of in proxy field inside package.json?
           //https://api.binance.com/api/v1/klines?symbol=ETHUSDT&interval=1h
           //const res= await fetch(`/api/v1/klines?symbol=${this.state.coinpair}&interval=${this.state.interval}`,requestOptions)
