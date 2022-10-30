@@ -204,7 +204,7 @@ shift =(arr)=> {
       l.style("opacity",1)
       focusTxt1.style("opacity",1)
     })
-    .on("touchmove",function(){
+    .on("touchmove",function(e){
        var z=d3.pointer(e,this)
        var x1=x.invert(z[0])
        var i=bisect(arr,x1,1)
