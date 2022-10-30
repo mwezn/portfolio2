@@ -58,25 +58,6 @@ class Chart extends Component {
 
       
     }
-    async postCoin(coin){
-      
-      this.setState(()=>{
-        return {coinpair: coin, data:null} 
-      })
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-    };
-      
-      const res= await fetch(`/api/v1/klines?symbol=${coin}&interval=${this.state.interval}`,requestOptions)
-      const d=await res.json();
-      console.log(d)
-      await this.setState({data:d})
-      console.log(this.state)
-      this.shift(d);
-
-      
-    }
 
     async getRange(time){
       
@@ -89,7 +70,7 @@ class Chart extends Component {
         headers: { 'Content-Type': 'application/json' }
     };
       
-      const res= await fetch(`/api/v1/klines?symbol=${this.state.coinpair}&interval=${time}`,requestOptions)
+      const res= await fetch(`/.netlify/functions/coinchange?coin=${coin}&interval=${this.state.interval}`,requestOptions)
       const d=await res.json();
       this.setState({data:d})
       let nested=this.state.data
