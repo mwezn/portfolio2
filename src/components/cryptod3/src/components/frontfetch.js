@@ -198,6 +198,31 @@ shift =(arr)=> {
        focus.style("opacity",0)
        focusTxt1.style("opacity",0)
      })
+     .on("touchstart",function(){
+      a.style("opacity",1)
+      focus.style("opacity",1)
+      l.style("opacity",1)
+      focusTxt1.style("opacity",1)
+    })
+    .on("touchmove",function(){
+       var z=d3.pointer(e,this)
+       var x1=x.invert(z[0])
+       var i=bisect(arr,x1,1)
+       let xlabel= arr[i]?new Date(arr[i][0]).toString().slice(0,24):null;
+       h1.style("font-family",'arial')
+       l.attr("x1",x(arr[i][0]))
+       l.attr("y1",y(arr[i][1]))
+       l.attr("x2",x(arr[i][0]))
+       l.attr("y2",y(d3.min(arr,(d)=>d[1])));
+       focus.attr("cx",x(arr[i][0]))
+       focus.attr("cy",y(arr[i][1]))
+       focusTxt1.html(arr[i]?`<div class="tooltip">x: ${xlabel} </br> y: $${Number(arr[i][1]).toFixed(30)} </div>`:null)
+    })
+    .on("touchend",function(){
+        a.style("opacity",0)
+       focus.style("opacity",0)
+       focusTxt1.style("opacity",0)
+    })
     
       
       
