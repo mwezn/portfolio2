@@ -35,14 +35,7 @@ class Chart extends Component {
           let nested=this.state.data
           console.log(nested)
           this.shift(d);
-          
-
-          /*const data=await res.json();
-          this.setState({data:data})
-          console.log(data)
-          let nested=this.state.data
-          console.log(nested)
-          this.shift(nested);*/
+       
     }
 
 
@@ -53,6 +46,25 @@ class Chart extends Component {
       })
     const requestOptions = {
         method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    };
+      
+      const res= await fetch(`/.netlify/functions/coinchange?coin=${coin}&interval=${this.state.interval}`,requestOptions)
+      const d=await res.json();
+      console.log(d)
+      await this.setState({data:d})
+      console.log(this.state)
+      this.shift(d);
+
+      
+    }
+    async postCoin(coin){
+      
+      this.setState(()=>{
+        return {coinpair: coin, data:null} 
+      })
+    const requestOptions = {
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     };
       
