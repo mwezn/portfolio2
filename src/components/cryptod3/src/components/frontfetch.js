@@ -70,7 +70,7 @@ class Chart extends Component {
         headers: { 'Content-Type': 'application/json' }
     };
       
-      const res= await fetch(`/.netlify/functions/coinchange?coin=${coin}&interval=${this.state.interval}`,requestOptions)
+      const res= await fetch(`/.netlify/functions/coinchange?coin=${this.state.coin}&interval=${time}`,requestOptions)
       const d=await res.json();
       this.setState({data:d})
       let nested=this.state.data
