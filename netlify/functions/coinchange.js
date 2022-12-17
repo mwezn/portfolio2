@@ -4,7 +4,8 @@ exports.handler = async (event, context) => {
     const itvl=event.queryStringParameters.interval
 
     try {
-        const response = await fetch(`https://api.binance.com/api/v1/klines?symbol=${coin}&interval=${itvl}`);
+        //const response = await fetch(`https://api.binance.com/api/v1/klines?symbol=${coin}&interval=${itvl}`);
+        const response = await fetch(`http://13.40.184.90:8080/coins/${coin}/${itvl}`);
         data = await response.json();
         statusCode = 200;
       } catch (err) {
