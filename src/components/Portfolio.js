@@ -14,14 +14,10 @@ const MainPage =()=>{
    
 
     const onClick =(d,e)=>{
-        window.location.href=d
+        //window.location.href=d;
+        window.open(d, '_blank');
     }
-    /*let myprojects=[
-        {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'0'},
-        {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:'1'},
-        {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:'2'},
-        {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:'4'},
-    ]*/
+
     let mypages = [
         {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'https://todoemailer.herokuapp.com/'},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:"https://mwezn.github.io/DueDateVisualizer/"},
@@ -35,7 +31,7 @@ const MainPage =()=>{
         //let classId=((i+1)%8)===0?8:((i+1)%8)
     
         return (
-        <div target='_blank' onClick={(e)=>onClick(d.href,e)} className={'pcard'+4}>
+        <div target='_blank' href={d.href} onClick={(e)=>onClick(d.href,e)} className={'pcard'+4}>
             <h1>{d.name}</h1><p>{d.tech}</p><img className="screenshot" alt={i} src={d.img}/>
         </div>)
     })
