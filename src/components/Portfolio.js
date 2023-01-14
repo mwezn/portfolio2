@@ -8,7 +8,7 @@ import img4 from '../assets/client-posts.png'
 import img5 from '../assets/sorting.png'
 import img6 from '../assets/j&p.png'
 import img7 from '../assets/crypto.png'
-
+import c4 from '../assets/connect4.png'
 
 const MainPage =()=>{
    
@@ -25,7 +25,8 @@ const MainPage =()=>{
         {name: "Telegram notes", tech:"Docker, Mongo, HTML", img:img4, href:"https://free-thoughts.netlify.app/"},
         {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/SortingAlg/sorting.html"},
         {name: "Jones & Palmer", tech: "React", img:img6, href:"/jp"},
-        {name: "Crypto prices", tech:"React D3",img:img7, href:"/cryptod3"}
+        {name: "Crypto prices", tech:"React D3",img:img7, href:"/cryptod3"},
+        {name: "Connect4", tech: "React", img:c4, href:"https://codepen.io/wezg/full/gOjRvMo"}
     ]
     let result=mypages.map((d,i)=>{
         //let classId=((i+1)%8)===0?8:((i+1)%8)
