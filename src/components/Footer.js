@@ -8,7 +8,6 @@ const Footer =()=>{
           <ul>
             <li><a target="_blank" rel="noreferrer" href="https://github.com/mwezn">Github: mwezn</a></li>
             <li><a href="mailto:m.w.g.nelson@gmail.com">m.w.g.nelson@gmail.com</a></li>
-            <li><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/michael-nelson-023472bb/">LinkedIn</a></li>
           </ul>
         </div>
     )
