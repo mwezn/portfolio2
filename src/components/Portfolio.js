@@ -20,10 +20,7 @@ const MainPage =()=>{
     let mypages = [
         {name: "Todo Emailer", tech:"React, Mongo, Express",img:img1, href:'https://todoemailer.herokuapp.com/'},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:"https://mwezn.github.io/DueDateVisualizer/"},
-        {name: "Maja Notes", tech:"CSS/JS, Ejs, Jest", img:img3, href:"http://13.40.184.90:3000/"},
         {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/SortingAlg/sorting.html"},
-        {name: "Jones & Palmer", tech: "React", img:img6, href:"/jp"},
-        {name: "Crypto prices", tech:"React D3",img:img7, href:"/cryptod3"},
         {name: "Connect4", tech: "React", img:c4, href:"https://codepen.io/wezg/full/gOjRvMo"}
     ]
     let result=mypages.map((d,i)=>{
