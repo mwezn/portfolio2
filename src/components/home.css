@@ -1,11 +1,16 @@
-
+h2.heading {
+    color: green;
+    font-family: monospace;
+    font-size: 14px;
+}
 
 div#about {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    margin:20px
+    margin:2px;
+    padding-top: 100px;
 }
 
 div.typingeff {
@@ -34,63 +39,14 @@ div.typingeff h1::after{
     margin:20px;
 }
 
-img.mypic {
-    max-width:300px;
-    max-height: 350px;
-    transition: all 0.5s;
-}
-img.mypic:hover  {
-    transform:scale(1.1)
-    
-}
+
 div#aboutme {
     position: relative;
     display: flex;
     flex-direction: column;
     top: 100px;
 }
-div#about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-div.tech {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
 
-div.currenttech {
-    display:flex;
-    flex-direction: column;
-    width:80%;
-    margin-top:20px;
-    background-color: rgb(9, 99, 141,0.4);
-    align-items: center;
-}
-
-.currenttech ul {
-    list-style-type:none;
-    display:grid;
-    grid-template-rows: auto auto;
-}
-
-
-div.futuretech {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width:80%;
-    margin-top:20px;
-    background-color: rgba(88, 160, 194, 0.9);
-}
-.futuretech ul {
-    list-style-type: none;
-    display:grid;
-    grid-template-rows: auto auto;
-}
 
 @media screen and (min-width:700px){
     div#about {
@@ -98,54 +54,22 @@ div.futuretech {
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-around;
-        margin:60px
+        margin:80px;
+        padding-top: 10px;
     }
     div.typingeff {
         position: relative;
         background-color: black;
         width:40%;
-       
-    }
-    div.mypic {
-        width: auto;
-        height:350px;
-    }
-    div.tech {
-        display:flex;
-        flex-direction: row;
-        
     }
 
-    img.mypic {
-        max-width:300px;
-        max-height: 350px;
-        
+    h2.heading {
+        color: green;
+        font-family: monospace;
+        font-size: 16px;
     }
 
-   div.currenttech {
-    
-    width:45%;
-    margin-left:20px;
-    
-  }
-
-  div.futuretech {
-    width:45%;
-    margin-left:20px;
-    margin-right:20px;
-    position: relative;
-  }
-  .currenttech ul {
-    display:flex;
-    flex-direction: column;
-  }
-  .futuretech ul {
-    display:flex;
-    flex-direction: column;
-  }
-.currenttech ul li {
-    margin-right: 100px;
-}
+  
 }
 
 

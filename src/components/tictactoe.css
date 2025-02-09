@@ -1,0 +1,92 @@
+body {
+    background-color: rgb(7, 7, 31);
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    
+  }
+  .container {
+    position: relative;
+    left: 10vw;
+    top:10px;
+  }
+  
+  .colourR{
+    color: red;
+    text-shadow: 5px 2px 4px #000
+  }
+  .colourB{
+    color: blue;
+    text-shadow: 5px 5px 4px #000
+  }
+  @keyframes spin { 
+    from { 
+        transform: rotateY(0deg); 
+    } to { 
+        transform: rotateY(360deg); 
+    }
+  }
+  
+  .colourRWin {
+    color: red;
+    text-shadow: 5px 2px 4px #000;
+    animation: spin 3s 3;
+    font-size: 50px;
+  }
+  
+  .colourBWin {
+    color: blue;
+    text-shadow: 5px 5px 4px #000;
+    animation: spin 3s 3;
+    font-size: 50px;
+  }
+  .colourG{
+    color: green;
+    text-shadow: 5px 5px 4px #000;
+    animation: spin 3s 3;
+    font-size: 50px;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #aaa;
+    border: 1px solid #222;
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 70px;
+    height: 70px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 70px;
+  }
+  
+  .square:focus {
+    outline: bold;
+  }
+  
+  .grid {
+    position: relative;
+    background-color: '12deff';
+    right:10px;
+  }
+  
+  
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  
+  #chosen {
+    display:none;
+  }
+  #chose .visible {
+    display: block;
+  }
+  
