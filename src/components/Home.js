@@ -21,7 +21,7 @@ const Home =()=>{
 
     function typer2() {
       txt2 = `A maths graduate whose fascinated by computer science, technology & how our world works
-          currently working in construction but in my spare time I enjoy improving my skills in coding..` 
+          currently working in construction but in my spare time I enjoy coding..` 
        if (j < txt2.length) {
          document.getElementById("demo2").innerHTML += txt2.charAt(j);
          j++;

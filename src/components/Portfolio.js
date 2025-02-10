@@ -11,23 +11,18 @@ import img6 from '../assets/j&p.png'
 import img7 from '../assets/crypto.png'
 import c4 from '../assets/connect4.png'
 import ttt from '../assets/tictactoe.png'
+import sine from '../assets/sine.jpg'
+import todo from '../assets/todo.png'
 
 
-
-// Can be any JSX.Element tag
-const items = [
-    <img src={img1} alt="Image 1" />,
-    <img src={img2} alt="Image 2" />,
-    <div>Custom Content 1</div>,
-  ];
-  
-  function Slider(props) {
+    function Slider(props) {
     return (
       <div className="App">
         <Carousel
           items={props.items}
           startIndex={0}
           onChange={(currentIndex) => console.log(currentIndex)}
+          interval={3000}
         />
       </div>
     );
@@ -42,13 +37,15 @@ const MainPage =()=>{
         //window.location.href=d;
         window.open(d, '_blank');
     }
-
+    //https://todoemailer.herokuapp.com/
     let mypages = [
-        {name: "Equation Plotter", tech:"Javascript, D3.js",img:img1, href:'https://todoemailer.herokuapp.com/'},
+        {name: "Equation Plotter", tech:"Javascript, D3.js",img:img1, href:''},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:"https://mwezn.github.io/DueDateVisualizer/"},
         {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/SortingAlg/sorting.html"},
         {name: "Connect4", tech: "React", img:c4, href:"https://codepen.io/wezg/full/gOjRvMo"},
-        {name: "TictacToe", tech: "React", img:ttt,href:'/tictactoe'}
+        {name: "Sine & Cos", tech: "HTML,JS", img:sine,href:''},
+        {name: "Todo Emailer", tech: "React, Node", img:todo,href:'https://todoemailer.herokuapp.com/'}
+
     ]
     let result=mypages.map((d,i)=>{
         let classId=((i+1)%8)===0?8:((i+1)%8)

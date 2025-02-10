@@ -34,6 +34,17 @@ div.typingeff h1::after{
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
+h2.heading::after {
+    color: green;
+    font-family: monospace;
+    font-size: 14px;
+    font-family: 'monospace';
+    position: relative;
+    content:'|';
+    animation-name:blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 
 #aboutme h2{
     margin:20px;
@@ -60,7 +71,7 @@ div#aboutme {
     div.typingeff {
         position: relative;
         background-color: black;
-        width:40%;
+        width:50%;
     }
 
     h2.heading {
@@ -83,6 +94,18 @@ div#aboutme {
     }
     100% {
         color:white;
+      }
+  }
+
+  @keyframes blink2 {
+    0% {
+        color:green;
+    }
+    50% {
+      color:black;
+    }
+    100% {
+        color:green;
       }
   }
     

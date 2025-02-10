@@ -3,7 +3,7 @@ nav.main {
     background-color: rgb(17, 46, 63);
     height: 80px;
     position:fixed;
-    width:100vw;
+    width:100%;
     top:0;
     z-index: 1;
 }

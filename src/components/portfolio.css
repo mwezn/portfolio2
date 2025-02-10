@@ -14,14 +14,14 @@ h1#projects {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(127,255,212,0.3); /*rgb127,255,212*/
+    background-color: rgba(103, 240, 40, 0.5); /*rgb127,255,212*/
     border:1px solid black;
     transition: all .5s;
     
     
 }
 .pcard1:hover {
-    background-color: rgb(127,255,212,0.9); /*rgb127,255,212*/
+    background-color: rgba(103, 240, 40, 0.9); /*rgb127,255,212*/
     color:white;
 
 }
@@ -52,6 +52,7 @@ h1#projects {
 .pcard3:hover {
     background-color: rgb(216,112,147,0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+    color:white;
 }
 
 .pcard4 {
@@ -85,9 +86,10 @@ h1#projects {
 .pcard5:hover {
     background-color: rgba(82, 56, 169, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+    color:white;
 }
 
-.card6 {
+.pcard6 {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -95,11 +97,12 @@ h1#projects {
     border:1px solid black;
     transition: all 1s;
 }
-.card6:hover {
+.pcard6:hover {
     background-color: rgba(17, 237, 212, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+    color:white;
 }
-.card7 {
+.pcard7 {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -107,11 +110,11 @@ h1#projects {
     border:1px solid black;
     transition: all 1s;
 }
-.card7:hover {
+.pcard7:hover {
     background-color: rgba(237, 233, 17, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
 }
-.card8 {
+.pcard8 {
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -119,7 +122,7 @@ h1#projects {
     border:1px solid black;
     transition: all 1s;
 }
-.card8:hover {
+.pcard8:hover {
     background-color: rgba(237, 17, 208, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
 }
