@@ -1,12 +1,11 @@
 //import { element } from "three/tsl";
-import * as THREE from "../node_modules/three/build/three.module.js"
+import * as THREE from "three"
 
-//const THREE=require('three')
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth/2, window.innerHeight/2 );
+renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animate );
 document.body.appendChild( renderer.domElement );
 
@@ -79,38 +78,38 @@ camera.position.z = 5;
 
 function animate() {
 
-	cube.rotation.x += 1;
-	cube.rotation.y += 1;
-	cube.rotation.z += 1;
+	cube.rotation.x += .01;
+	cube.rotation.y += .01;
+	cube.rotation.z += .01;
 
-    cube2.rotation.x += 1;
-	cube2.rotation.y += 1;
-	cube2.rotation.z += 1;
+    cube2.rotation.x += .01;
+	cube2.rotation.y += .01;
+	cube2.rotation.z += .01;
 
-  cube3.rotation.x += 1;
-	cube3.rotation.y += 1;
-	cube3.rotation.z += 1;
+  cube3.rotation.x += .01;
+	cube3.rotation.y += .01;
+	cube3.rotation.z += .01;
 
-  cube4.rotation.x += 1;
-	cube4.rotation.y += 1;
-	cube4.rotation.z += 1;
+  cube4.rotation.x += .01;
+	cube4.rotation.y += .01;
+	cube4.rotation.z += .01;
 
-	//line.rotation.x += 0.01;
+	//line.rotation.x += 0.1;
 	//line.rotation.y += 0.01;
 	//line.rotation.z += 0.01;
 
-	line2.rotation.x +=1;
+	line2.rotation.x +=.01;
 
-	cubelines.rotation.x+=1
-	cubelines2.rotation.x+=1
-	cubelines3.rotation.x+=1
+	cubelines.rotation.x+=.01
+	cubelines2.rotation.x+=.01
+	cubelines3.rotation.x+=.01
 
-	line2.rotation.y +=1;
-	//line2.rotation.y+=0.01;
+	line2.rotation.y +=.01;
+	line2.rotation.y+=0.01;
 
-	cubelines.rotation.y+=1
-	cubelines2.rotation.y+=1
-	cubelines3.rotation.y+=1
+	cubelines.rotation.y+=.01
+	cubelines2.rotation.y+=.01
+	cubelines3.rotation.y+=.01
 
 
   

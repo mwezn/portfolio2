@@ -11,6 +11,7 @@ import ttt from '../assets/tictactoe.png'
 import sine from '../assets/sine.jpg'
 import todo from '../assets/todo.png'
 import ng from '../assets/network2.gif'
+import cube from '../assets/cube.gif'
 
 
     function Slider(props) {
@@ -42,9 +43,8 @@ const MainPage =()=>{
         {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/D3/sorting.html"},
         {name: "Connect4", tech: "React", img:c4, href:"https://codepen.io/wezg/full/gOjRvMo"},
         {name: "Sine & Cos", tech: "HTML,JS", img:sine,href:'/D3/sinewave.html'},
-        {name: "Todo Emailer", tech: "React, Node", img:todo,href:'https://todoemailer.herokuapp.com/'},
         {name: 'TicTacToe', tech: 'React', img:ttt, href:'/tictactoe'},
-        {name: '3D Windows Logo', tech: 'Three.js,JS,HTML', href:'/3DJS/cube.html'},
+        {name: '3D Windows Logo', tech: 'Three.js,JS,HTML', img:cube, href:'/3DJS/cube.html'},
         {name: 'Network Graph', tech: 'D3,JS,HTML', img:ng, href:'/D3/countries.html'}
 
     ]
