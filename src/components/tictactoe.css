@@ -8,6 +8,7 @@ body {
     position: relative;
     left: 10vw;
     top:10px;
+    background-color: #aaa;
   }
   
   .colourR{
@@ -63,6 +64,7 @@ body {
     padding: 0;
     text-align: center;
     width: 70px;
+    box-shadow: 2px 2px 2px 2px white;
   }
   
   .square:focus {
@@ -80,6 +82,7 @@ body {
   .game {
     display: flex;
     flex-direction: row;
+    background-color: #aaa;
   }
   
   

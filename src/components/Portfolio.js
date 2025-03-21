@@ -5,14 +5,12 @@ import 'react-responsive-3d-carousel/dist/styles.css';
 
 import img1 from '../assets/flexclip.gif'
 import img2 from '../assets/medicalmaths.png'
-import img3 from '../assets/maja.png'
 import img5 from '../assets/sorting.png'
-import img6 from '../assets/j&p.png'
-import img7 from '../assets/crypto.png'
 import c4 from '../assets/connect4.png'
 import ttt from '../assets/tictactoe.png'
 import sine from '../assets/sine.jpg'
 import todo from '../assets/todo.png'
+import ng from '../assets/network2.gif'
 
 
     function Slider(props) {
@@ -22,7 +20,7 @@ import todo from '../assets/todo.png'
           items={props.items}
           startIndex={0}
           onChange={(currentIndex) => console.log(currentIndex)}
-          interval={3000}
+          interval={5000}
         />
       </div>
     );
@@ -39,16 +37,19 @@ const MainPage =()=>{
     }
     //https://todoemailer.herokuapp.com/
     let mypages = [
-        {name: "Equation Plotter", tech:"Javascript, D3.js",img:img1, href:''},
+        {name: "Equation Plotter", tech:"Javascript, D3.js",img:img1, href:'/D3/interactive.html'},
         {name:"Medical graph", tech:"HTML/JS, D3.js",img:img2,href:"https://mwezn.github.io/DueDateVisualizer/"},
-        {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/SortingAlg/sorting.html"},
+        {name: "Sorting Algorithms", tech:"HTML,JS & D3", img:img5, href:"/D3/sorting.html"},
         {name: "Connect4", tech: "React", img:c4, href:"https://codepen.io/wezg/full/gOjRvMo"},
-        {name: "Sine & Cos", tech: "HTML,JS", img:sine,href:''},
-        {name: "Todo Emailer", tech: "React, Node", img:todo,href:'https://todoemailer.herokuapp.com/'}
+        {name: "Sine & Cos", tech: "HTML,JS", img:sine,href:'/D3/sinewave.html'},
+        {name: "Todo Emailer", tech: "React, Node", img:todo,href:'https://todoemailer.herokuapp.com/'},
+        {name: 'TicTacToe', tech: 'React', img:ttt, href:'/tictactoe'},
+        {name: '3D Windows Logo', tech: 'Three.js,JS,HTML', href:'/3DJS/cube.html'},
+        {name: 'Network Graph', tech: 'D3,JS,HTML', img:ng, href:'/D3/countries.html'}
 
     ]
     let result=mypages.map((d,i)=>{
-        let classId=((i+1)%8)===0?8:((i+1)%8)
+        let classId=((i+1)%9)===0?9:((i+1)%9)
     
         return (
         <div target='_blank' href={d.href} onClick={(e)=>onClick(d.href,e)} className={'pcard'+classId}>

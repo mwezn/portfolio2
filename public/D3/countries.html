@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bordering Countries Network Graph</title>
+  <script type="text/javascript" src="./flags.js"></script>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <style>
+    .box {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+}
+.yellow {
+  background-color:yellow;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+  </style>
+</head>
+<body>
+<button onclick="fetchJson()">Fetch all countries</button>
+<div id="graph-container"></div>
+
+
+<h2>Just a D3 network graph showing all road borders between countries</h2>
+<ul id="all">
+</ul>
+
+<div id="graph-container2"></div>
+
+<script>
+
+arr=Object.keys(countriesFlags)
+arr1=Object.values(countriesFlags)
+
+
+console.log(arr)
+console.log(arr1)
+
+
+
+
+
+
+// Sample data (replace with your own dataset)
+var list=document.getElementById('all');
+// Set up the SVG container
+const width = 1200;
+const height = 3000;
+
+let a=[];
+const fetchJson= ()=> {
+
+  
+  
+  let options={ headers : { 'Content-Type': 'application/json','Accept': 'application/json'}}
+  fetch('all.json',options)
+  .then(d=>d.json())
+  .then(json=>{
+      
+      data=json.filter(d=>d.cioc)
+      data=data.filter(d=>d.borders)
+      console.log(data)
+      
+     data.forEach(i=>{
+      let obj={country:null, borders:[],continent:null,x:null,y:null,cx:null,cy:null,r:1}
+
+      //console.log(i)
+      //list.innerHTML+=`<li>${i.name.common} ${i.borders} </li>`
+      obj.country=i.name.common
+      obj.continent=i.region
+      obj.subregion=i.subregion
+      obj.population=i.population
+      i.borders.forEach(d=>{
+        //console.log(data.find(elem=>elem.cioc==d||elem.cca3==d)?data.find(elem=>elem.cioc==d||elem.cca3==d).name:"no")
+        obj.borders.push(data.find(elem=>elem.cioc==d||elem.cca3==d)?data.find(elem=>elem.cioc==d||elem.cca3==d).name.common:null)
+        obj.borders=obj.borders.filter(d=>d!=null)
+        
+
+      })
+      
+      a.push(obj)
+      
+    })
+    console.log(a)
+    shift(a)
+     
+  })
+}
+
+//fetchJson()
+
+//Roadmap Network between countries
+//My memory of geography expanded with google :)
+const countries = [
+  { id:"France", name: "France", continent: "Europe", 
+  borders: ["UK","Spain","Italy","Germany", "Andora", "Belgium","Luxembourg"]
+  },
+  { id:"Luxembourg", name: "Luxembourg", continent: "Europe", 
+  borders: ["Germany","France"]
+  },
+  { id:"Andora", name: "Andora", continent: "Europe", 
+  borders: ["Spain","France"]
+  },
+  { id:"Belgium", name: "Belgium", continent: "Europe", 
+  borders: ["France","Germany"] //Add others later
+  },
+
+  { id:"Spain", name: "Spain",continent: "Europe", borders: ["France","Portugal","Andora","Morocco"]
+  },
+  {id: 'Portugal' , name: 'Portugal', continent: 'Europe' ,borders: ['Spain']},
+  {id:"Morocco", name:"Morocco", continent:"Africa", borders:["Algeria","Spain"]},
+  {id:"Algeria", name:"Algeria", continent:"Africa", 
+  borders:["Mali","Mauritania","Morocco","Niger","Tunisia", "Libya","Western Sahara"]},
+  {id:"Mali", name:"Mali", continent:"Africa", borders:["Algeria", "Mali","Niger"]}, //??
+  {id:"Mauritania", name:"Mauritania", continent:"Africa", borders:["Mali"]},
+  {id:"Niger", name:"Niger", continent:"Africa", borders:["Mali"]},
+  {id:"Tunisia", name:"Tunisia", continent:"Africa", borders:["Algeria"]},
+  {id:"Libya", name:"Libya", continent:"Africa", borders:["Algeria"]},
+  {id:"Western Sahara", name:"Western Sahara", continent:"Africa", borders:["Algeria"]},
+  
+{id: "Germany", name:"Germany", continent:"Europe", 
+  borders:["Belgium","Luxembourg","France",
+  "Denmark", "Poland","Switzerland","Austria","Czech Republic","The Netherlands"]},
+  {id: "Denmark", name:"Denmark", continent:"Europe", 
+  borders:["Germany","The Netherlands"]},
+
+  {id: "The Netherlands", name:"The Netherlands", continent:"Europe", 
+  borders:["Germany","Denmark"]},
+
+  {id: "Switzerland", name:"Switzerland", continent:"Europe", 
+  borders:["Austria","Germany"]},
+  {id: "Austria", name:"Austria", continent:"Europe", 
+  borders:["Switzerland","Germany"]},
+  {id: "Poland", name:"Poland", continent:"Europe", borders:["Germany","Lithuania", "Czech Republic"
+    ,"Slovakia","Belarus", "Ukraine", "Russia", ]},
+  {id: "Lithuania", name:"Lithuania", continent:"Europe", 
+  borders:["Poland"]},
+  {id: "Czech Republic", name:"Czech Republic", continent:"Europe", 
+  borders:["Poland","Germany"]},
+  {id: "Slovakia", name:"Slovakia", continent:"Europe", 
+  borders:["Poland","Czech Republic"]},
+  {id: "Belarus", name:"Belarus", continent:"Europe", 
+  borders:["Poland","Ukraine", "Russia"]},
+  {id: "Ukraine", name:"Ukraine", continent:"Europe", 
+  borders:["Poland","Russia","Belarus"]},
+  {id: "Russia", name:"Russia", continent:"Europe", 
+  borders:["Poland","Ukraine","Belarus"]},
+
+  
+
+
+  {id: "UK", name:"UK", continent:"Europe", borders:["Ireland", "France"]},//Via ferry & tunnels
+  {id: "Ireland", name:"Ireland", continent:"Europe", borders:["UK"]},
+  {id: "Italy", name:"Italy", continent: "Europe", borders:["France"]}//& Switzerland, Slovenia etc
+];
+
+
+
+
+
+const shift =(arr)=> {
+    d3.select("svg").remove();
+    const svg = d3.select("#graph-container")
+              .append("svg")
+              .attr("width", width)
+              .attr("height", height);
+
+  
+// Create a force simulation
+const simulation = d3.forceSimulation(arr)
+  .force("link", d3.forceLink().id(d => d.country))
+   //.force("charge", d3.forceManyBody().strength(1))
+  .force("collide", d3.forceCollide(35).iterations(50))
+  .force("cluster", forceCluster(arr))
+  .force("center", d3.forceCenter(width / 2, height / 4));
+
+  function centroid(arr) {
+  let x = 0;
+  let y = 0;
+  let z = 0;
+  for (const d of arr) {
+    let k = d.r ** 2;
+    x += d.x * k;
+    y += d.y * k;
+    z += k;
+  }
+  return {x: x / z, y: y / z};
+}
+
+  function forceCluster(arr) {
+  const strength = 1.2;
+  let alpha=8;
+  
+
+  function force(alpha) {
+    const centroids = d3.rollup(arr, centroid, d =>d.continent)
+    //console.log(centroids)
+    const l = alpha * strength;
+    for (const d of arr) {
+      const {x: cx, y: cy} = centroids.get(d.continent);
+      d.vx -= (d.x - cx) * l;
+      d.vy -= (d.y - cy) * l;
+    }
+  }
+
+  force.initialize = _ => arr = _;
+
+  return force;
+}
+
+
+// Create links based on borders
+const links = [];
+arr.forEach(country => {
+  country.borders.forEach(border => {
+    links.push({ source: country.country, target: border });
+  });
+});
+  console.log(links)
+// Create the graph
+const link = svg.selectAll(".link")
+  .data(links)
+  .enter().append("line")
+  .attr("class", "link")
+  .attr('stroke', 'black')
+  
+  
+
+var node = svg.selectAll(".node")
+  .data(arr)
+  .enter()
+  .append("circle")
+  .attr("class", "node")
+  .attr("cx", d=>d.x)
+  .attr("cy", function(d) { return d.y; })
+  .attr("r", d=>{
+    return 20*(d.population/250000000)**0.5
+    //each 100 million people=10cm radius
+
+  })
+  .call(d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended))
+  //.attr('r', 10)
+  .style("fill",d=>d.continent=="Europe"?"rgba(22,29,200,0.8)":d.continent=="Africa"?"rgba(2,200,20,0.8)":d.continent=="Asia"?"rgba(220,29,2,0.8)":d.continent=="Americas"?"rgba(202,30,200,0.8)":"yellow")
+  
+  node.on('mouseover', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '1');
+})
+node.on('mouseout', function (d, i) {
+          d3.select(this).transition()
+               .duration('50')
+               .attr('opacity', '0.8');
+})
+  var myimage = svg.selectAll('image')
+        .data(arr)
+        .enter()
+        .append('image')
+        .attr('xlink:href',(d,i)=>{
+          console.log(d.country)
+          return countriesFlags[d.country]?`${countriesFlags[d.country].mini}`:''
+        })
+        .attr("x", (d,i)=>100)
+        .attr("y",(d,i)=>100)
+        .attr('width', '15px')
+        .attr('height', '10px')
+   
+
+
+  
+    const textD= svg.selectAll("text")
+       .data(arr)
+       .enter()
+       .append("text")
+       .attr("fill","black")
+       .attr("x", (d,i)=>200+i*75)
+       .attr("y",(d,i)=>i*75)
+       .attr("font-size",14)
+       .text(d=>d.country)
+       
+
+// Update the simulation
+simulation.nodes(arr)
+  .on("tick", tick);
+
+ simulation.force("link")
+  .links(links);
+
+// Define the tick function
+
+function tick(e) {
+   
+
+
+
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+
+  node
+    .attr("cx", d=>d.x)
+    .attr("cy", d =>d.y)
+    
+  textD
+    .attr('x',d=>d.x)
+    .attr('y',d=>d.y)
+  myimage
+     .attr('x', d=>d.x)
+     .attr('y', d=>d.y)
+}
+
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+
+
+}
+
+
+
+
+const svg = d3.select("#graph-container")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+// Create a force simulation
+/*const simulation = d3.forceSimulation()
+  .force("link", d3.forceLink().id(d => d.id))
+  .force("charge", d3.forceManyBody().strength(-50))
+  .force("center", d3.forceCenter(width / 2, height / 2));*/
+
+// Create a force simulation
+const simulation = d3.forceSimulation()
+  .force("link", d3.forceLink().id(d => d.name))
+  .force("charge", d3.forceManyBody().strength(1))
+  .force("collide", d3.forceCollide(40).iterations(50))
+  .force("center", d3.forceCenter(width / 4, height / 7));
+
+  function centroid(countries) {
+  let x = 0;
+  let y = 0;
+  let z = 0;
+  for (const d of countries) {
+    let k = d.r ** 2;
+    x += d.x * k;
+    y += d.y * k;
+    z += k;
+  }
+  return {x: x / z, y: y / z};
+}
+
+  function forceCluster(countries) {
+  const strength = 1.2;
+  let alpha=8;
+  
+
+  function force(alpha) {
+    const centroids = d3.rollup(countries, centroid, d =>d.continent)
+    //console.log(centroids)
+    const l = alpha * strength;
+    for (const d of countries) {
+      const {x: cx, y: cy} = centroids.get(d.continent);
+      d.vx -= (d.x - cx) * l;
+      d.vy -= (d.y - cy) * l;
+    }
+  }
+
+  force.initialize = _ => countries = _;
+
+  return force;
+}
+
+// Create links based on borders
+const links = [];
+countries.forEach(country => {
+  country.borders.forEach(border => {
+    links.push({ source: country.id, target: border });
+  });
+});
+
+// Create the graph
+const link = svg.selectAll(".link")
+  .data(links)
+  .enter().append("line")
+  .attr("class", "link")
+  .attr("stroke", "blue")
+
+const node = svg.selectAll(".node")
+  .data(countries)
+  .enter()
+  .append("circle")
+  .attr("class", "node")
+  .attr("r", 5)
+  .call(d3.drag()
+    .on("start", dragstarted)
+    .on("drag", dragged)
+    .on("end", dragended))
+  .style("fill", d=>d.continent=="Europe"?"green":d.continent=="Africa"?"yellow":"blue")
+
+  
+    const textD= svg.selectAll("text")
+       .data(countries)
+       .enter()
+       .append("text")
+       .attr("fill","black")
+       .attr("x", (d,i)=>100+i*75)
+       .attr("y",(d,i)=>100+i*75)
+       .text(d=>d.id)
+    var myimage = svg.selectAll('image')
+        .data(countries)
+        .enter()
+        .append('image')
+        .attr('xlink:href',(d,i)=>countriesFlags[d.name]?`${countriesFlags[d.name].mini}`:'')
+        
+        .attr("x", (d,i)=>100)
+        .attr("y",(d,i)=>100)
+        .attr('width', '30px')
+        .attr('height', '30px')
+   
+       
+
+// Update the simulation
+simulation.nodes(countries)
+  .on("tick", ticked);
+
+simulation.force("link")
+  .links(links);
+
+// Define the tick function
+function ticked() {
+  link
+    .attr("x1", d => d.source.x)
+    .attr("y1", d => d.source.y)
+    .attr("x2", d => d.target.x)
+    .attr("y2", d => d.target.y);
+
+  node
+    .attr("cx", d => d.x)
+    .attr("cy", d => d.y)
+    
+  textD
+    .attr('x',d=>d.x)
+    .attr('y',d=>d.y)
+  myimage
+     .attr('x', d=>d.x)
+     .attr('y', d=>d.y)
+}
+
+// Define drag functions
+function dragstarted(event, d) {
+  if (!event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(event, d) {
+  d.fx = event.x;
+  d.fy = event.y;
+}
+
+function dragended(event, d) {
+  if (!event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
+
+</script>
+
+
+
+</body>
+</html>
+

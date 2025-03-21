@@ -113,18 +113,34 @@ h1#projects {
 .pcard7:hover {
     background-color: rgba(237, 233, 17, 0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+    color:white;
 }
 .pcard8 {
     display:flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(237, 17, 208, 0.5);/*rgb216,112,147*/
+    background-color: rgba(46, 13, 99, 0.5);/*rgb216,112,147*/
     border:1px solid black;
     transition: all 1s;
 }
 .pcard8:hover {
-    background-color: rgba(237, 17, 208, 0.9);/*rgb216,112,147*/
+    background-color: rgb(51, 83, 83,0.9);/*rgb216,112,147*/
     clip-path: circle(300px);
+    color:white;
+}
+
+.pcard9 {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(17, 237, 83, 0.5);/*rgb216,112,147*/
+    border:1px solid black;
+    transition: all 1s;
+}
+
+.pcard9:hover {
+    background-color: rgba(17, 237, 83, 0.9);
+    color:white;
 }
 
 .roundedCard {
