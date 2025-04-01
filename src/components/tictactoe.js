@@ -48,7 +48,7 @@ const Square=(props)=>{
       for (let i=0;i<9;i++){
         if (board[i]==null){
            board[i]=this.state.ai;
-           let score=miniMax1(this.state.human,this.state.ai,board,0,true)
+           let score=miniMax1(this.state.human,this.state.ai,board,5,true)
            board[i]=null;
            console.log(score)
            if (score<bestScore){
@@ -158,7 +158,7 @@ const Square=(props)=>{
     }
    function miniMax1(human,ai,board,depth,Max){
     let res=calculateWinner(board);
-    if (res!==null){
+    if (depth==0 ||res!==null){
       let score=res==human?10:res==ai?-10:0;
       return score
     }
@@ -168,7 +168,7 @@ const Square=(props)=>{
       for (let i=0;i<9;i++){
         if (board[i]==null){
           board[i]=human;
-          var score=miniMax1(human,ai,board,depth+1,false);
+          var score=miniMax1(human,ai,board,depth-1,false);
           board[i]=null
           best=Math.max(best,score);
         }
@@ -180,7 +180,7 @@ const Square=(props)=>{
       for (let i=0;i<9;i++){
         if(board[i]==null){
           board[i]=ai;
-          score=miniMax1(human,ai,board,depth+1,true);
+          score=miniMax1(human,ai,board,depth-1,true);
           board[i]=null
           best=Math.min(best,score);
         }
